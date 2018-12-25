@@ -1,0 +1,5 @@
+_site
+.DS_Store
+.jekyll-metadata
+assets
+node_modules
