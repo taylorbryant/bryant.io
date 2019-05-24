@@ -13,7 +13,7 @@
     "gulp-if": "2.0.2",
     "gulp-postcss": "7.0.1",
     "gulp-purgecss": "1.2.0",
-    "gulp-sourcemaps": "2.6.4",
+    "gulp-sourcemaps": "2.6.5",
     "postcss-import": "11.1.0",
     "tailwindcss": "0.7.4"
   },
