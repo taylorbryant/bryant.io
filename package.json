@@ -1,0 +1,35 @@
+{
+  "name": "bryant.io",
+  "version": "1.0.0",
+  "description": "Personal website for Taylor Bryant",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "export": "npm run build && next export",
+    "start": "next start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taylorbryant/bryant.io.git"
+  },
+  "author": "Taylor Bryant",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/taylorbryant/bryant.io/issues"
+  },
+  "homepage": "https://github.com/taylorbryant/bryant.io#readme",
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "next": "^9.0.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "1.2.0",
+    "autoprefixer": "9.6.1",
+    "cssnano": "4.1.10",
+    "tailwindcss": "1.0.5"
+  }
+}
