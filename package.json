@@ -1,6 +1,6 @@
 {
   "name": "bryant.io",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "gulpfile.babel.js",
   "devDependencies": {
     "autoprefixer": "9.6.1",
@@ -14,7 +14,7 @@
     "gulp-purgecss": "1.2.0",
     "gulp-sourcemaps": "2.6.5",
     "postcss-import": "12.0.1",
-    "tailwindcss": "0.7.4"
+    "tailwindcss": "1.0.5"
   },
   "scripts": {
     "build": "NODE_ENV=production gulp",
