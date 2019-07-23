@@ -7,8 +7,7 @@
     "dev": "next",
     "build": "next build",
     "export": "npm run build && next export",
-    "start": "next start",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "next start"
   },
   "repository": {
     "type": "git",
@@ -21,15 +20,13 @@
   },
   "homepage": "https://github.com/taylorbryant/bryant.io#readme",
   "dependencies": {
-    "@zeit/next-css": "^1.0.1",
+    "@emotion/core": "^10.0.14",
+    "@mdx-js/loader": "^1.0.19",
+    "@mdx-js/react": "^1.0.27",
+    "@next/mdx": "^8.1.0",
     "next": "^9.0.0",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
-  },
-  "devDependencies": {
-    "@fullhuman/postcss-purgecss": "1.2.0",
-    "autoprefixer": "9.6.1",
-    "cssnano": "4.1.10",
-    "tailwindcss": "1.0.5"
+    "react-dom": "^16.8.6",
+    "theme-ui": "^0.2.14"
   }
 }
