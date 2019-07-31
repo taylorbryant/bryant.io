@@ -1,6 +1,6 @@
 {
   "name": "bryant.io",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Personal website for Taylor Bryant",
   "main": "index.js",
   "scripts": {
@@ -27,6 +27,6 @@
     "next": "9.0.2",
     "react": "16.8.6",
     "react-dom": "16.8.6",
-    "theme-ui": "0.2.23"
+    "theme-ui": "0.2.25"
   }
 }
