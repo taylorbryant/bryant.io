@@ -1,6 +1,6 @@
 {
   "name": "bryant.io",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "Personal website for Taylor Bryant",
   "main": "index.js",
   "scripts": {
@@ -21,8 +21,8 @@
   "homepage": "https://github.com/taylorbryant/bryant.io#readme",
   "dependencies": {
     "@emotion/core": "10.0.15",
-    "@mdx-js/loader": "1.1.6",
-    "@mdx-js/react": "1.1.6",
+    "@mdx-js/loader": "1.2.2",
+    "@mdx-js/react": "1.2.2",
     "@next/mdx": "9.0.3",
     "next": "9.0.3",
     "react": "16.9.0",
