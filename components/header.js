@@ -12,8 +12,7 @@ function Header() {
 
         <ul className="flex">
           {[
-            { title: "Home", route: "/" },
-            { title: "Blog", route: "/blog" }
+            { title: "Home", route: "/" }
           ].map(navigationItem => (
             <li className="font-black  ml-6 uppercase" key={navigationItem.title}>
               <Link href={navigationItem.route}>
