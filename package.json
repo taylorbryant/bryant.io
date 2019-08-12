@@ -1,6 +1,6 @@
 {
   "name": "tailwind-next",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Tailwind Next Starter",
   "main": "index.js",
   "scripts": {
@@ -31,8 +31,8 @@
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "1.2.0",
     "autoprefixer": "9.6.1",
-    "babel-plugin-macros": "^2.6.1",
-    "babel-plugin-preval": "^3.0.1",
+    "babel-plugin-macros": "2.6.1",
+    "babel-plugin-preval": "3.0.1",
     "cssnano": "4.1.10",
     "tailwindcss": "1.1.1"
   }
