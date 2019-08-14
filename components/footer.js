@@ -2,7 +2,7 @@ import Container from "./container";
 
 function Footer() {
   return (
-    <footer className="bg-gradient">
+    <footer className="bg-gradient-green-blue">
       <Container>
         <ul className="flex items-center justify-between text-sm text-white">
           <li>

@@ -10,7 +10,7 @@ function Header() {
           <a className="font-black text-xl uppercase">Taylor Bryant</a>
         </Link>
 
-        <ul className="flex">
+        {/* <ul className="flex">
           {[
             { title: "Home", route: "/" },
             { title: "Blog", route: "/blog" }
@@ -21,7 +21,7 @@ function Header() {
               </Link>
             </li>
           ))}
-        </ul>
+        </ul> */}
       </header>
     </Container>
   );

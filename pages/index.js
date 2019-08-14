@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import Card from "../components/card";
 import Container from "../components/container";
 import HeroSection from "../components/hero-section";
 import Layout from "../components/layout";
@@ -9,7 +10,7 @@ function Home() {
   return (
     <Layout>
       <HeroSection>
-        <h2 className="font-black mb-2 text-4xl text-white">
+        <h2 className="font-black text-4xl text-white">
           Hi, I'm Taylor Bryant.
         </h2>
         <p className="text-2xl text-white">
@@ -19,29 +20,30 @@ function Home() {
 
       <section>
         <Container>
-          <h2 className="font-black mb-8 text-2xl uppercase">Open Source</h2>
+          <h2 className="font-black mt-4 mb-8 text-2xl uppercase">
+            Open Source
+          </h2>
 
           {[
             {
               title: `Gatsby Starter Tailwind`,
-              description: `A Gatsby starter styled using Tailwind CSS`
+              description: `A Gatsby starter styled using Tailwind CSS`,
+              url: `https://github.com/taylorbryant/gatsby-starter-tailwind`
             },
             {
               title: `Tailwind Next`,
-              description: `A Next.js starter styled using Tailwind CSS`
+              description: `A Next.js starter styled using Tailwind CSS`,
+              url: `https://github.com/taylorbryant/tailwind-next`
             },
             {
               title: `Tailwind Jekyll`,
-              description: `A starter kit for using Tailwind CSS with Jekyll`
+              description: `A starter kit for using Tailwind CSS with Jekyll`,
+              url: `https://github.com/taylorbryant/tailwind-jekyll`
             }
           ].map(repository => (
-            <article
-              className="bg-yellow-400 p-8 border-black mb-4"
-              key={repository.title}
-            >
-              <h2 className="font-black text-2xl mb-2">{repository.title}</h2>
-              <p className="text-lg">{repository.description}</p>
-            </article>
+            <a href={repository.url} key={repository.title} target="_blank">
+              <Card heading={repository.title} body={repository.description} />
+            </a>
           ))}
         </Container>
       </section>
@@ -53,10 +55,7 @@ function Home() {
           {posts.map(post => (
             <Link href={post.path} key={post.title}>
               <a>
-                <article className="bg-yellow-400 p-8 border-black mb-4">
-                  <h2 className="font-black text-2xl mb-2">{post.title}</h2>
-                  <p className="text-lg">{post.summary}</p>
-                </article>
+                <Card heading={post.title} body={post.summary} />
               </a>
             </Link>
           ))}

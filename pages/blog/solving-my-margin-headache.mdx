@@ -15,9 +15,15 @@ Throughout my attempted mastery of CSS, one of my most significant pain points h
 
 First, I tried limiting myself to only using `margin-bottom`.
 
-<p data-height="800" data-theme-id="32204" data-slug-hash="ppdOZN" data-default-tab="css,result" data-user="taylorbryant" data-embed-version="2" data-pen-title="Example #1 - Bottom margin only" className="codepen">See the Pen <a href="https://codepen.io/taylorbryant/pen/ppdOZN/">Example #1 - Bottom margin only</a> by Taylor Bryant (<a href="https://codepen.io/taylorbryant">@taylorbryant</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js" />
+<iframe
+  height="500"
+  scrolling="no"
+  src="//codepen.io/taylorbryant/embed/ppdOZN/?height=500&default-tab=js,result&embed-version=3&editable=true"
+  frameBorder="no"
+  allowtransparency="true"
+  allowFullScreen={true}
+  className="mb-4 outline-none w-full"
+/>
 
 While this doesn't look awful, it introduces a couple of issues:
 
@@ -28,9 +34,15 @@ While this doesn't look awful, it introduces a couple of issues:
 
 Second, I tried modifying my code to account for any edge cases using `:first-child` and `:last-child` selectors.
 
-<p data-height="800" data-theme-id="32204" data-slug-hash="YYEeMW" data-default-tab="css,result" data-user="taylorbryant" data-embed-version="2" data-pen-title="Example #2 - :first-child & :last-child selectors" className="codepen">See the Pen <a href="https://codepen.io/taylorbryant/pen/YYEeMW/">Example #2 - :first-child & :last-child selectors</a> by Taylor Bryant (<a href="https://codepen.io/taylorbryant">@taylorbryant</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js" />
+<iframe
+  height="500"
+  scrolling="no"
+  src="//codepen.io/taylorbryant/embed/YYEeMW/?height=500&default-tab=js,result&embed-version=3&editable=true"
+  frameBorder="no"
+  allowtransparency="true"
+  allowFullScreen={true}
+  className="mb-4 outline-none w-full"
+/>
 
 This solves the issues introduced with the last approach. However, I can't help but get code smells, because:
 
@@ -41,11 +53,16 @@ This solves the issues introduced with the last approach. However, I can't help 
 
 By combining the `:not` selector with `:first-child` and `:last-child`, I was able to get rid of the excess code and land on my best approach yet.
 
-<p data-height="800" data-theme-id="32204" data-slug-hash="dJZqjg" data-default-tab="css,result" data-user="taylorbryant" data-embed-version="2" data-pen-title="Example #3 - :not(:first-child) & :not(:last-child)" className="codepen">See the Pen <a href="https://codepen.io/taylorbryant/pen/dJZqjg/">Example #3 - :not(:first-child) & :not(:last-child)</a> by Taylor Bryant (<a href="https://codepen.io/taylorbryant">@taylorbryant</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js" />
+<iframe
+  height="500"
+  scrolling="no"
+  src="//codepen.io/taylorbryant/embed/dJZqjg/?height=500&default-tab=js,result&embed-version=3&editable=true"
+  frameBorder="no"
+  allowtransparency="true"
+  allowFullScreen={true}
+  className="mb-4 outline-none w-full"
+/>
 
 ## Takeaway
 
 If you ever find yourself writing more CSS just to undo previous rules, it’s probably worth giving `:not` a shot. After my _margin epiphany_, I see myself applying this same concept to other aspects of my CSS every day.
-
