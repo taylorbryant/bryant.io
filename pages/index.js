@@ -18,9 +18,9 @@ function Home() {
         </p>
       </HeroSection>
 
-      <section>
+      <section className="mt-4">
         <Container>
-          <h2 className="font-black mt-4 mb-8 text-2xl uppercase">
+          <h2 className="font-black mb-4 md:mb-8 text-2xl uppercase">
             Open Source
           </h2>
 
@@ -50,7 +50,7 @@ function Home() {
 
       <section>
         <Container>
-          <h2 className="font-black mb-8 text-2xl uppercase">Blog</h2>
+          <h2 className="font-black mb-4 md:mb-8 text-2xl uppercase">Blog</h2>
 
           {posts.map(post => (
             <Link href={post.path} key={post.title}>
