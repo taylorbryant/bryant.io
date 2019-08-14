@@ -34,7 +34,7 @@ export default class MyApp extends App {
           <meta
             key="google-description"
             itemProp="description"
-            content={SEO_DESCRIPTIONy}
+            content={SEO_DESCRIPTION}
           />
           <meta
             key="google-image"
