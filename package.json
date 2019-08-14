@@ -1,7 +1,7 @@
 {
-  "name": "tailwind-next",
-  "version": "1.0.4",
-  "description": "Tailwind Next Starter",
+  "name": "bryant.io",
+  "version": "1.0.0",
+  "description": "Personal website for Taylor Bryant",
   "main": "index.js",
   "scripts": {
     "dev": "next",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/oddstronaut/tailwind-next.git"
+    "url": "git+https://github.com/taylorbryant/bryant.io.git"
   },
   "author": "Taylor Bryant",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/oddstronaut/tailwind-next/issues"
+    "url": "https://github.com/taylorbryant/bryant.io/issues"
   },
-  "homepage": "https://github.com/oddstronaut/tailwind-next#readme",
+  "homepage": "https://github.com/taylorbryant/bryant.io#readme",
   "dependencies": {
     "@mdx-js/loader": "^1.2.2",
     "@next/mdx": "^9.0.3",
