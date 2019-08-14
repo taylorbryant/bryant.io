@@ -28,7 +28,7 @@ function Post(props) {
         <meta
           key="google-image"
           itemProp="image"
-          content="/public/android-chrome-256x256.png"
+          content="/static/favicon/android-chrome-256x256.png"
         />
         {/* Facebook Meta Tags */}
         <meta
@@ -50,7 +50,7 @@ function Post(props) {
         <meta
           key="facebook-image"
           property="og:image"
-          content="/public/android-chrome-256x256.png"
+          content="/static/favicon/android-chrome-256x256.png"
         />
         {/* Twitter Meta Tags */}
         <meta
@@ -71,7 +71,7 @@ function Post(props) {
         <meta
           key="twitter-iamge"
           name="twitter:image"
-          content="/public/android-chrome-256x256.png"
+          content="/static/favicon/android-chrome-256x256.png"
         />
       </Head>
       
