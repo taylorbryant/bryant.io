@@ -28,7 +28,7 @@ function Post(props) {
         <meta
           key="google-image"
           itemProp="image"
-          content="/static/images/android-chrome-256x256.png"
+          content="/static/favicon/android-chrome-256x256.png"
         />
         {/* Facebook Meta Tags */}
         <meta
@@ -50,7 +50,7 @@ function Post(props) {
         <meta
           key="facebook-image"
           property="og:image"
-          content="/static/images/android-chrome-256x256.png"
+          content="/static/favicon/android-chrome-256x256.png"
         />
         {/* Twitter Meta Tags */}
         <meta
@@ -71,9 +71,10 @@ function Post(props) {
         <meta
           key="twitter-iamge"
           name="twitter:image"
-          content="/static/images/android-chrome-256x256.png"
+          content="/static/favicon/android-chrome-256x256.png"
         />
       </Head>
+      
       <HeroSection>
         <p className="mb-2 text-white tracking-widest uppercase">
           {format(props.meta.date, `MMMM D, YYYY`)}
@@ -81,8 +82,9 @@ function Post(props) {
         <h2 className="font-black text-4xl text-white">{props.meta.title}</h2>
         <p className="text-2xl text-white">{props.meta.summary}</p>
       </HeroSection>
+
       <Container>
-        <div className="markdown-body">{props.children}</div>
+        <div className="my-4 markdown-body">{props.children}</div>
       </Container>
     </Layout>
   );
