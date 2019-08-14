@@ -7,14 +7,14 @@ function Footer() {
         <ul className="flex items-center justify-between text-sm text-white">
           <li>
             Created by{" "}
-            <a href="https://bryant.io" target="_blank" className="font-bold">
+            <a href="https://github.com/taylorbryant" target="_blank" className="font-bold">
               Taylor Bryant
             </a>
           </li>
 
           <li>
             <a
-              href="https://github.com/oddstronaut/tailwind-next"
+              href="https://github.com/taylorbryant/bryant.io"
               target="_blank"
               className="font-bold"
             >
