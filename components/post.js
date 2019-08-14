@@ -9,13 +9,68 @@ function Post(props) {
   return (
     <Layout>
       <Head>
-        <title key="title">{`Taylor Bryant - ${props.meta.title}`}</title>
-        <meta name="description" content={props.meta.summary} />
-        <meta name="twitter:card" content={props.meta.summary} />
-        <meta name="twitter:title" content={props.meta.title} />
-        <meta name="twitter:description" content={props.meta.summary} />
-        <meta itemProp="name" content={props.meta.title} />
-        <meta itemProp="description" content={props.meta.summary} />
+        {/* HTML Meta Tags */}
+        <title key="html-meta-title">The title</title>
+        <meta
+          key="html-meta-description"
+          name="description"
+          content={props.meta.summary}
+        />
+        {/* Google / Search Engine Tags */}
+        <meta key="google-name" itemProp="name" content={props.meta.title} />
+        <meta
+          key="google-description"
+          itemProp="description"
+          content={props.meta.summary}
+        />
+        <meta
+          key="google-image"
+          itemProp="image"
+          content="https://google.com/image.png"
+        />
+        {/* Facebook Meta Tags */}
+        <meta
+          key="facebook-url"
+          property="og:url"
+          content={`https://bryant.io/blog${props.meta.url}`}
+        />
+        <meta key="facebook-type" property="og:type" content="website" />
+        <meta
+          key="facebook-title"
+          property="og:title"
+          content={props.meta.title}
+        />
+        <meta
+          key="facebook-description"
+          property="og:description"
+          content={props.meta.summary}
+        />
+        <meta
+          key="facebook-image"
+          property="og:image"
+          content="https://google.com/image.png"
+        />
+        {/* Twitter Meta Tags */}
+        <meta
+          key="twitter-card"
+          name="twitter:card"
+          content="summary_large_image"
+        />
+        <meta
+          key="twitter-title"
+          name="twitter:title"
+          content={props.meta.title}
+        />
+        <meta
+          key="twitter-description"
+          name="twitter:description"
+          content={props.meta.summary}
+        />
+        <meta
+          key="twitter-iamge"
+          name="twitter:image"
+          content="https://google.com/image.png"
+        />
       </Head>
       <HeroSection>
         <p className="mb-2 text-white tracking-widest uppercase">
