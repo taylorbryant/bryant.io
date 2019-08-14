@@ -10,9 +10,9 @@ function Home() {
   return (
     <Layout>
       <HeroSection>
-        <h2 className="font-black text-4xl text-white">
+        <h1 className="font-black text-4xl text-white">
           Hi, I'm Taylor Bryant.
-        </h2>
+        </h1>
         <p className="text-2xl text-white">
           I build software products using React, Next.js, and GraphQL.
         </p>
