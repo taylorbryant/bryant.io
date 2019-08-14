@@ -14,6 +14,8 @@
   );
 }
 
+/* purgecss start ignore */
+
 .markdown-body {
   @apply text-lg;
 }
@@ -49,7 +51,8 @@
   @apply bg-transparent break-normal m-0 p-0 whitespace-pre;
 }
 
-.markdown-body ul, ol {
+.markdown-body ul,
+ol {
   list-style: initial;
   @apply leading-loose pl-8;
 }
@@ -61,3 +64,4 @@
 .markdown-body img {
   @apply mb-4 w-full;
 }
+/* purgecss end ignore */
