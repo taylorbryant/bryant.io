@@ -19,6 +19,8 @@ export default class MyApp extends App {
     return (
       <>
         <Head>
+          <title key="title">Taylor Bryant - Software Engineer</title>
+
           <link
             rel="apple-touch-icon"
             sizes="180x180"

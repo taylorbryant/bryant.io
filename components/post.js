@@ -9,6 +9,7 @@ function Post(props) {
   return (
     <Layout>
       <Head>
+        <title key="title">{`Taylor Bryant - ${props.meta.title}`}</title>
         <meta name="description" content={props.meta.summary} />
         <meta name="twitter:card" content={props.meta.summary} />
         <meta name="twitter:title" content={props.meta.title} />
