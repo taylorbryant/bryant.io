@@ -10,7 +10,9 @@ function Post(props) {
     <Layout>
       <Head>
         {/* HTML Meta Tags */}
-        <title key="html-meta-title">The title</title>
+        <title key="html-meta-title">{`Taylor Bryant - ${
+          props.meta.title
+        }`}</title>
         <meta
           key="html-meta-description"
           name="description"
@@ -26,7 +28,7 @@ function Post(props) {
         <meta
           key="google-image"
           itemProp="image"
-          content="https://google.com/image.png"
+          content="/static/images/android-chrome-256x256.png"
         />
         {/* Facebook Meta Tags */}
         <meta
@@ -48,7 +50,7 @@ function Post(props) {
         <meta
           key="facebook-image"
           property="og:image"
-          content="https://google.com/image.png"
+          content="/static/images/android-chrome-256x256.png"
         />
         {/* Twitter Meta Tags */}
         <meta
@@ -69,7 +71,7 @@ function Post(props) {
         <meta
           key="twitter-iamge"
           name="twitter:image"
-          content="https://google.com/image.png"
+          content="/static/images/android-chrome-256x256.png"
         />
       </Head>
       <HeroSection>
