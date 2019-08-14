@@ -64,4 +64,8 @@ ol {
 .markdown-body img {
   @apply mb-4 w-full;
 }
+
+.markdown-body *:last-child {
+  @apply mb-0;
+}
 /* purgecss end ignore */
