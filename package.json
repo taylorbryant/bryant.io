@@ -1,6 +1,6 @@
 {
   "name": "bryant.io",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Personal website for Taylor Bryant",
   "main": "index.js",
   "scripts": {
@@ -40,8 +40,8 @@
     "babel-plugin-macros": "2.6.1",
     "babel-plugin-preval": "3.0.1",
     "cssnano": "4.1.10",
-    "eslint": "^6.1.0",
-    "eslint-plugin-react": "^7.14.3",
+    "eslint": "6.1.0",
+    "eslint-plugin-react": "7.14.3",
     "tailwindcss": "1.1.1"
   }
 }
