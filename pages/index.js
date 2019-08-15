@@ -14,7 +14,8 @@ function Home() {
           Hi, I'm Taylor Bryant.
         </h1>
         <p className="text-2xl text-white">
-          I build software products using React, Next.js, and GraphQL.
+          I'm a software engineer from Memphis, TN. I build software products using React, Next.js,
+          and GraphQL.
         </p>
       </HeroSection>
 
