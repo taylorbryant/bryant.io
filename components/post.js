@@ -1,5 +1,6 @@
 import { format } from "date-fns";
 import Head from "next/head";
+import React from "react";
 
 import Container from "./container";
 import HeroSection from "./hero-section";
@@ -14,64 +15,64 @@ function Post(props) {
           props.meta.title
         }`}</title>
         <meta
+          content={props.meta.summary}
           key="html-meta-description"
           name="description"
-          content={props.meta.summary}
         />
         {/* Google / Search Engine Tags */}
-        <meta key="google-name" itemProp="name" content={props.meta.title} />
+        <meta content={props.meta.title} itemProp="name" key="google-name" />
         <meta
-          key="google-description"
-          itemProp="description"
           content={props.meta.summary}
+          itemProp="description"
+          key="google-description"
         />
         <meta
-          key="google-image"
-          itemProp="image"
           content="/static/favicon/android-chrome-256x256.png"
+          itemProp="image"
+          key="google-image"
         />
         {/* Facebook Meta Tags */}
         <meta
+          content={`https://bryant.io/blog${props.meta.url}`}
           key="facebook-url"
           property="og:url"
-          content={`https://bryant.io/blog${props.meta.url}`}
         />
-        <meta key="facebook-type" property="og:type" content="website" />
+        <meta content="website" key="facebook-type" property="og:type" />
         <meta
+          content={props.meta.title}
           key="facebook-title"
           property="og:title"
-          content={props.meta.title}
         />
         <meta
+          content={props.meta.summary}
           key="facebook-description"
           property="og:description"
-          content={props.meta.summary}
         />
         <meta
+          content="/static/favicon/android-chrome-256x256.png"
           key="facebook-image"
           property="og:image"
-          content="/static/favicon/android-chrome-256x256.png"
         />
         {/* Twitter Meta Tags */}
         <meta
+          content="summary_large_image"
           key="twitter-card"
           name="twitter:card"
-          content="summary_large_image"
         />
         <meta
+          content={props.meta.title}
           key="twitter-title"
           name="twitter:title"
-          content={props.meta.title}
         />
         <meta
+          content={props.meta.summary}
           key="twitter-description"
           name="twitter:description"
-          content={props.meta.summary}
         />
         <meta
+          content="/static/favicon/android-chrome-256x256.png"
           key="twitter-iamge"
           name="twitter:image"
-          content="/static/favicon/android-chrome-256x256.png"
         />
       </Head>
       

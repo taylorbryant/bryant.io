@@ -1,4 +1,5 @@
 import Link from "next/link";
+import React from "react";
 
 import Card from "../components/card";
 import Container from "../components/container";
@@ -11,11 +12,11 @@ function Home() {
     <Layout>
       <HeroSection>
         <h1 className="font-black text-4xl text-white">
-          Hi, I'm Taylor Bryant.
+          Hi, I&#39;m Taylor Bryant.
         </h1>
         <p className="text-2xl text-white">
-          I'm a software engineer from Memphis, TN. I build software products using React, Next.js,
-          and GraphQL.
+          I&#39;m a software engineer from Memphis, TN. I build software
+          products using React, Next.js, and GraphQL.
         </p>
       </HeroSection>
 
@@ -42,8 +43,13 @@ function Home() {
               url: `https://github.com/taylorbryant/tailwind-jekyll`
             }
           ].map(repository => (
-            <a href={repository.url} key={repository.title} target="_blank">
-              <Card heading={repository.title} body={repository.description} />
+            <a
+              href={repository.url}
+              key={repository.title}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <Card body={repository.description} heading={repository.title} />
             </a>
           ))}
         </Container>
@@ -56,7 +62,7 @@ function Home() {
           {posts.map(post => (
             <Link href={post.path} key={post.title}>
               <a>
-                <Card heading={post.title} body={post.summary} />
+                <Card body={post.summary} heading={post.title} />
               </a>
             </Link>
           ))}
