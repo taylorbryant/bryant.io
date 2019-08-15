@@ -1,9 +1,13 @@
 import React from "react";
+import ReactGA from "react-ga";
 import App from "next/app";
 import Head from "next/head";
+import Router from 'next/router';
 
 const SEO_TITLE = `Taylor Bryant - Software Engineer`;
 const SEO_DESCRIPTION = `Taylor Bryant is a software engineer living in Memphis, TN. He builds software products using React, Next.js, and GraphQL.`;
+
+Router.events.on("routeChangeComplete", url => ReactGA.pageview(url));
 
 export default class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -14,6 +18,11 @@ export default class MyApp extends App {
     }
 
     return { pageProps };
+  }
+
+  componentDidMount() {
+    ReactGA.initialize("UA-111515120-4");
+    ReactGA.pageview(window.location.pathname + window.location.search);
   }
 
   render() {
