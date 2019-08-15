@@ -79,7 +79,7 @@ function Post(props) {
         <p className="mb-2 text-white tracking-widest uppercase">
           {format(props.meta.date, `MMMM D, YYYY`)}
         </p>
-        <h1 className="font-black text-4xl text-white">{props.meta.title}</h1>
+        <h1 className="font-black leading-tight md:leading-normal mb-4 md:mb-0 text-4xl text-white">{props.meta.title}</h1>
         <p className="text-2xl text-white">{props.meta.summary}</p>
       </HeroSection>
 
