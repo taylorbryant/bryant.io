@@ -25,7 +25,7 @@ function Footer() {
             </a>
             {` `}
             and{` `}
-            <a className="font-bold" href="" target="_blank">
+            <a className="font-bold" href="https://tailwindcss.com" target="_blank">
               Tailwind CSS
             </a>
             . Read the code{` `}
