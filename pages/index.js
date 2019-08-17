@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import gql from "graphql-tag";
+import { getOr } from "lodash/fp";
 import Link from "next/link";
 import React from "react";
 import { useQuery } from "urql";
@@ -39,7 +40,11 @@ function Home() {
     query: repositoriesQuery
   });
 
-  const repositories = repositoriessResult.data.viewer.repositories.edges;
+  const repositories = getOr(
+    [],
+    `data.viewer.repositories.edges`,
+    repositoriessResult
+  );
 
   return (
     <Layout>
@@ -53,37 +58,39 @@ function Home() {
         </p>
       </HeroSection>
 
-      <section className="mt-4">
-        <Container>
-          <h2 className="font-black mb-4 md:mb-8 text-2xl uppercase">
-            Open Source
-          </h2>
+      {repositoriessResult.loading ? null : (
+        <section className="mt-4">
+          <Container>
+            <h2 className="font-black mb-4 md:mb-8 text-2xl uppercase">
+              Open Source
+            </h2>
 
-          {repositories.map(({ node: repository }) => (
-            <a
-              href={repository.url}
-              key={repository.name}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <Card>
-                <div className="flex items-center justify-between">
-                  <h2 className="font-black text-2xl mb-2">
-                    {repository.name}
-                  </h2>
-                  <div className="flex items-center justify-end">
-                    <FontAwesomeIcon className="h-6 mr-2 w-6" icon={faStar} />
-                    <p className="text-lg">
-                      {repository.stargazers.totalCount}
-                    </p>
+            {repositories.map(({ node: repository }) => (
+              <a
+                href={repository.url}
+                key={repository.name}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <Card>
+                  <div className="flex items-center justify-between">
+                    <h2 className="font-black text-2xl mb-2">
+                      {repository.name}
+                    </h2>
+                    <div className="flex items-center justify-end">
+                      <FontAwesomeIcon className="h-6 mr-2 w-6" icon={faStar} />
+                      <p className="text-lg">
+                        {repository.stargazers.totalCount}
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <p className="text-lg">{repository.description}</p>
-              </Card>
-            </a>
-          ))}
-        </Container>
-      </section>
+                  <p className="text-lg">{repository.description}</p>
+                </Card>
+              </a>
+            ))}
+          </Container>
+        </section>
+      )}
 
       <section>
         <Container>
