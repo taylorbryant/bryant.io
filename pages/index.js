@@ -1,13 +1,46 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import gql from "graphql-tag";
 import Link from "next/link";
 import React from "react";
+import { useQuery } from "urql";
 
 import Card from "../components/card";
 import Container from "../components/container";
 import HeroSection from "../components/hero-section";
 import Layout from "../components/layout";
-import posts from "../data/posts";
+import posts from "../src/posts";
+
+const repositoriesQuery = gql`
+  query getRepositories {
+    viewer {
+      repositories(
+        orderBy: { direction: DESC, field: STARGAZERS }
+        affiliations: OWNER
+        first: 7
+      ) {
+        edges {
+          node {
+            url
+            name
+            description
+            stargazers {
+              totalCount
+            }
+          }
+        }
+      }
+    }
+  }
+`;
 
 function Home() {
+  const [repositoriessResult] = useQuery({
+    query: repositoriesQuery
+  });
+
+  const repositories = repositoriessResult.data.viewer.repositories.edges;
+
   return (
     <Layout>
       <HeroSection>
@@ -26,30 +59,27 @@ function Home() {
             Open Source
           </h2>
 
-          {[
-            {
-              title: `Gatsby Starter Tailwind`,
-              description: `A Gatsby starter styled using Tailwind CSS`,
-              url: `https://github.com/taylorbryant/gatsby-starter-tailwind`
-            },
-            {
-              title: `Tailwind Next`,
-              description: `A Next.js starter styled using Tailwind CSS`,
-              url: `https://github.com/taylorbryant/tailwind-next`
-            },
-            {
-              title: `Tailwind Jekyll`,
-              description: `A starter kit for using Tailwind CSS with Jekyll`,
-              url: `https://github.com/taylorbryant/tailwind-jekyll`
-            }
-          ].map(repository => (
+          {repositories.map(({ node: repository }) => (
             <a
               href={repository.url}
-              key={repository.title}
+              key={repository.name}
               rel="noopener noreferrer"
               target="_blank"
             >
-              <Card body={repository.description} heading={repository.title} />
+              <Card>
+                <div className="flex items-center justify-between">
+                  <h2 className="font-black text-2xl mb-2">
+                    {repository.name}
+                  </h2>
+                  <div className="flex items-center justify-end">
+                    <FontAwesomeIcon className="h-6 mr-2 w-6" icon={faStar} />
+                    <p className="text-lg">
+                      {repository.stargazers.totalCount}
+                    </p>
+                  </div>
+                </div>
+                <p className="text-lg">{repository.description}</p>
+              </Card>
             </a>
           ))}
         </Container>
@@ -62,7 +92,10 @@ function Home() {
           {posts.map(post => (
             <Link href={post.path} key={post.title}>
               <a>
-                <Card body={post.summary} heading={post.title} />
+                <Card>
+                  <h2 className="font-black text-2xl mb-2">{post.title}</h2>
+                  <p className="text-lg">{post.summary}</p>
+                </Card>
               </a>
             </Link>
           ))}
