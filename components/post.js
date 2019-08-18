@@ -1,5 +1,6 @@
 import { format } from "date-fns";
 import Head from "next/head";
+import PropTypes from "prop-types";
 import React from "react";
 
 import Container from "./container";
@@ -11,9 +12,7 @@ function Post(props) {
     <Layout>
       <Head>
         {/* HTML Meta Tags */}
-        <title key="html-meta-title">{`Taylor Bryant - ${
-          props.meta.title
-        }`}</title>
+        <title key="html-meta-title">{`Taylor Bryant - ${props.meta.title}`}</title>
         <meta
           content={props.meta.summary}
           key="html-meta-description"
@@ -75,12 +74,14 @@ function Post(props) {
           name="twitter:image"
         />
       </Head>
-      
+
       <HeroSection>
         <p className="mb-2 text-white tracking-widest uppercase">
           {format(props.meta.date, `MMMM D, YYYY`)}
         </p>
-        <h1 className="font-black leading-tight md:leading-normal mb-4 md:mb-0 text-4xl text-white">{props.meta.title}</h1>
+        <h1 className="font-black leading-tight md:leading-normal mb-4 md:mb-0 text-4xl text-white">
+          {props.meta.title}
+        </h1>
         <p className="text-2xl text-white">{props.meta.summary}</p>
       </HeroSection>
 
@@ -90,5 +91,10 @@ function Post(props) {
     </Layout>
   );
 }
+
+Post.propTypes = {
+  children: PropTypes.node.isRequired,
+  meta: PropTypes.object.isRequired
+};
 
 export default Post;

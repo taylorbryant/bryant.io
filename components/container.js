@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React from "react";
 
 function Container(props) {
@@ -11,5 +12,14 @@ function Container(props) {
     </div>
   );
 }
+
+Container.defaultProps = {
+  disablePadding: false
+};
+
+Container.propTypes = {
+  children: PropTypes.node.isRequired,
+  disablePadding: PropTypes.bool
+};
 
 export default Container;

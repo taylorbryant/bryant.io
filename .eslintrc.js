@@ -4,10 +4,6 @@ module.exports = {
     es6: true
   },
   extends: ["eslint:recommended", "plugin:react/recommended"],
-  globals: {
-    Atomics: "readonly",
-    SharedArrayBuffer: "readonly"
-  },
   parserOptions: {
     ecmaFeatures: {
       jsx: true
@@ -15,12 +11,16 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: "module"
   },
-  plugins: ["react"],
+  plugins: ["prettier", "react"],
   rules: {
-    indent: ["error", 2],
     "linebreak-style": ["error", "unix"],
+    "prettier/prettier": "error",
     quotes: ["error", "backtick"],
-    semi: ["error", "always"],
     "react/jsx-sort-props": ["error"]
+  },
+  settings: {
+    react: {
+      version: "detect"
+    }
   }
 };

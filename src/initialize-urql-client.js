@@ -1,37 +1,35 @@
+import "isomorphic-unfetch";
+import getConfig from "next/config";
 import {
+  cacheExchange,
   createClient,
   dedupExchange,
-  cacheExchange,
   fetchExchange,
   ssrExchange
 } from "urql";
 
-import "isomorphic-unfetch";
+const { publicRuntimeConfig } = getConfig();
 
-let urqlClient = null;
 let ssrCache = null;
+let urqlClient = null;
 
 export default function initUrqlClient(initialState) {
-  // Create a new client for every server-side rendered request to reset its state
-  // for each rendered page
-  // Reuse the client on the client-side however
   const isServer = typeof window === `undefined`;
+
   if (isServer || !urqlClient) {
     ssrCache = ssrExchange({ initialState });
 
     urqlClient = createClient({
-      url: `https://api.github.com/graphql`,
+      exchanges: [dedupExchange, cacheExchange, ssrCache, fetchExchange],
       fetchOptions: {
         headers: {
-          Authorization: `Bearer 5810d827f92e04859522921432535a3ceebdbf96`
+          Authorization: `Bearer ${publicRuntimeConfig.GITHUB_API_TOKEN}`
         }
       },
-      // Active suspense mode on the server-side
       suspense: isServer,
-      exchanges: [dedupExchange, cacheExchange, ssrCache, fetchExchange]
+      url: `https://api.github.com/graphql`
     });
   }
 
-  // Return both the cache and the client
   return [urqlClient, ssrCache];
 }

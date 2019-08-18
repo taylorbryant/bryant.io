@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React from "react";
 
 function Card(props) {
@@ -7,5 +8,9 @@ function Card(props) {
     </article>
   );
 }
+
+Card.propTypes = {
+  children: PropTypes.node.isRequired
+};
 
 export default Card;

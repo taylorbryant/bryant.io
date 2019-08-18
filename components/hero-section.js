@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React from "react";
 
 import Container from "./container";
@@ -9,5 +10,9 @@ function Hero(props) {
     </section>
   );
 }
+
+Hero.propTypes = {
+  children: PropTypes.node.isRequired
+};
 
 export default Hero;
