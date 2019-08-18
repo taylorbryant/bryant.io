@@ -1,6 +1,6 @@
 {
   "name": "bryant.io",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Personal website for Taylor Bryant",
   "main": "index.js",
   "scripts": {
@@ -51,11 +51,11 @@
     "babel-plugin-preval": "3.0.1",
     "cssnano": "4.1.10",
     "eslint": "6.1.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-prettier": "3.1.0",
     "eslint-plugin-react": "7.14.3",
-    "husky": "^3.0.4",
-    "lint-staged": "^9.2.3",
+    "husky": "3.0.4",
+    "lint-staged": "9.2.3",
     "prettier": "1.18.2",
     "tailwindcss": "1.1.1"
   }
