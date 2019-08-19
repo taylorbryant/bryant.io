@@ -73,12 +73,12 @@ function Home() {
                 target="_blank"
               >
                 <Card>
-                  <div className="flex items-center justify-between">
-                    <h2 className="font-black text-2xl mb-2">
-                      {repository.name}
+                  <div className="flex items-center justify-between mb-2">
+                    <h2 className="font-black text-2xl">
+                      {`${repository.name}`}
                     </h2>
                     <div className="flex items-center justify-end">
-                      <FontAwesomeIcon className="h-6 mr-2 w-6" icon={faStar} />
+                      <FontAwesomeIcon className="h-5 mr-2 w-5" icon={faStar} />
                       <p className="text-lg">
                         {repository.stargazers.totalCount}
                       </p>
