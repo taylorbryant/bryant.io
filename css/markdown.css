@@ -6,7 +6,7 @@
 .markdown-body a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  @apply bg-gradient-green-blue font-black text-blue-500;
+  @apply bg-gradient-green-blue font-black;
 }
 
 .markdown-body p {
@@ -41,13 +41,11 @@ ol {
 
 .markdown-body :not(pre) code {
   @apply align-baseline;
-  @apply bg-gray-100;
+  @apply bg-yellow-400;
   @apply font-mono;
   @apply inline-block;
   @apply leading-none;
   @apply p-2;
-  @apply rounded-sm;
-  @apply text-purple-600;
   @apply text-sm;
   @apply whitespace-no-wrap;
   font-weight: 400;
