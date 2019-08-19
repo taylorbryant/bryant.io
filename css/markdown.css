@@ -1,0 +1,55 @@
+/* purgecss start ignore */
+.markdown-body {
+  @apply text-lg;
+}
+
+.markdown-body a {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  @apply bg-gradient-green-blue font-black text-blue-500;
+}
+
+.markdown-body p {
+  @apply leading-loose mb-4 text-lg;
+}
+
+.markdown-body h2 {
+  @apply font-black mb-2 mt-8 text-3xl;
+}
+
+.markdown-body h3 {
+  @apply font-black mb-2 mt-8 text-xl;
+}
+
+.markdown-body ul,
+ol {
+  list-style: initial;
+  @apply leading-loose pl-8;
+}
+
+.markdown-body li {
+  @apply my-2;
+}
+
+.markdown-body img {
+  @apply mb-4 w-full;
+}
+
+.markdown-body *:last-child {
+  @apply mb-0;
+}
+
+.markdown-body :not(pre) code {
+  @apply align-baseline;
+  @apply bg-gray-100;
+  @apply font-mono;
+  @apply inline-block;
+  @apply leading-none;
+  @apply p-2;
+  @apply rounded-sm;
+  @apply text-purple-600;
+  @apply text-sm;
+  @apply whitespace-no-wrap;
+  font-weight: 400;
+}
+/* purgecss end ignore */
