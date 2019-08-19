@@ -1,7 +1,14 @@
 /* purgecss start ignore */
+/**
+ * Tailwind CSS theme for `prism.js`
+ * Based on the syntax theme used in the Tailwind CSS docs, which is based  on Atom's
+ * `atom-dark` theme: https://github.com/atom/atom-dark-syntax
+ * @author Taylor Bryant
+ */
+
 code[class*="language-"],
 pre[class*="language-"] {
-  @apply font-mono text-gray-200;
+  @apply font-mono scrolling-touch subpixel-antialiased text-code-white text-gray-200;
   direction: ltr;
   text-align: left;
   white-space: pre;
@@ -11,15 +18,48 @@ pre[class*="language-"] {
   tab-size: 4;
   hyphens: none;
 }
+
 pre[class*="language-"] {
-  @apply p-4;
   overflow: auto;
-  border-radius: 0.3em;
+  @apply p-4 rounded-lg;
 }
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-  @apply bg-gray-800 p-4 text-sm;
+  @apply bg-gray-800 text-sm;
+}
+
+code.language-js .token.regex,
+pre.language-js .token.regex,
+.token.selector,
+.token.attr-name,
+.token.property,
+.token.regex,
+.token.class-name,
+.token.entity {
+  @apply text-code-yellow;
+}
+
+code.language-diff,
+pre.language-diff {
+  @apply text-gray-400;
+}
+
+code.language-diff .token.inserted,
+pre.language-diff .token.inserted,
+.token.url,
+.token.attr-value,
+.token.char,
+.token.string,
+.token.builtin,
+.token.inserted,
+.token.boolean,
+.token.constant {
+  @apply text-code-green;
+}
+
+:not(pre) > code[class*="language-"] {
+  padding: 0.1em;
   border-radius: 0.3em;
 }
 
@@ -30,90 +70,59 @@ pre[class*="language-"] {
   @apply text-gray-500;
 }
 
-.token.punctuation {
-  color: #c5c8c6;
-}
-
 .namespace {
   opacity: 0.7;
 }
 
-.token.property,
-.token.keyword,
-.token.tag {
-  color: #96cbfe;
-}
-
-.token.class-name {
-  color: #ffffb6;
-  text-decoration: underline;
-}
-
-.token.boolean,
-.token.constant {
-  color: #99cc99;
-}
-
 .token.symbol,
-.token.deleted {
-  color: #f92672;
+.token.deleted,
+.token.tag,
+.token.number,
+code.language-js .token.boolean,
+pre.language-js .token.boolean {
+  @apply text-code-red;
 }
 
-.token.number {
-  color: #ff73fd;
-}
-
-.token.selector,
-.token.attr-name,
-.token.string,
-.token.char,
-.token.builtin,
-.token.inserted {
-  color: #a8ff60;
-}
-
-.token.variable {
-  color: #c6c5fe;
-}
-
-.token.operator {
-  color: #ededed;
-}
-
-.token.entity {
-  color: #ffffb6;
-}
-
-.token.url {
-  color: #96cbfe;
-}
-
-.language-css .token.string,
-.style .token.string {
-  color: #87c38a;
+.token.unit,
+.token.function,
+.token.punctuation,
+.token.hexcode,
+.token.operator,
+code.language-js .token.operator,
+pre.language-js .token.operator {
+  @apply text-code-blue;
 }
 
 .token.atrule,
-.token.attr-value {
-  color: #f9ee98;
+.token.atrule > .token.property,
+.token.atrule > .token.property + .token.punctuation,
+.token.atrule
+  > .token.property
+  + .token.punctuation
+  + .token.number
+  + .token.unit,
+.token.atrule > .token.number,
+.token.atrule > .token.unit,
+code.language-js .token.punctuation,
+pre.language-js .token.punctuation,
+code.language-js .token.keyword,
+pre.language-js .token.keyword,
+code.language-bash .token.function,
+pre.language-bash .token.function {
+  @apply text-code-white;
 }
 
-.token.function {
-  color: #dad085;
-}
-
-.token.regex {
-  color: #e9c062;
-}
-
-.token.important {
-  color: #fd971f;
-}
-
+.token.rule,
 .token.important,
+.token.variable {
+  font-weight: inherit;
+  @apply text-code-purple;
+}
+
 .token.bold {
   font-weight: bold;
 }
+
 .token.italic {
   font-style: italic;
 }
@@ -121,115 +130,4 @@ pre[class*="language-"] {
 .token.entity {
   cursor: help;
 }
-
-code[class*="language-"],
-pre[class*="language-"] {
-  @apply subpixel-antialiased !important;
-  @apply text-code-white !important;
-  @apply scrolling-touch !important;
-}
-
-.token.comment {
-  @apply text-gray-500 !important;
-}
-
-.token.atrule {
-  @apply text-code-white !important;
-}
-
-.token.atrule > .token.property {
-  @apply text-code-white !important;
-}
-
-.token.atrule > .token.property + .token.punctuation {
-  @apply text-code-white !important;
-}
-
-.token.atrule
-  > .token.property
-  + .token.punctuation
-  + .token.number
-  + .token.unit {
-  @apply text-code-white !important;
-}
-
-.token.atrule > .token.number {
-  @apply text-code-white !important;
-}
-
-.token.atrule > .token.unit {
-  @apply text-code-white !important;
-}
-
-.token.function {
-  @apply text-code-blue !important;
-}
-
-.token.number {
-  @apply text-code-red !important;
-}
-
-.token.unit {
-  @apply text-code-red !important;
-}
-
-.token.punctuation {
-  @apply text-code-blue !important;
-}
-
-.token.hexcode {
-  @apply text-code-blue !important;
-}
-
-.token.tag {
-  @apply text-code-red !important;
-}
-
-.token.attr-name {
-  @apply text-code-yellow !important;
-}
-
-.token.attr-value {
-  @apply text-code-green !important;
-}
-
-.token.string {
-  @apply text-code-green !important;
-}
-
-.token.url {
-  @apply text-code-green !important;
-}
-
-.token.selector {
-  @apply text-code-yellow !important;
-}
-
-.token.property {
-  @apply text-code-yellow !important;
-}
-
-.token.rule {
-  @apply text-code-purple !important;
-}
-
-.token.important {
-  font-weight: inherit !important;
-  @apply text-code-purple !important;
-}
-
-code.language-diff,
-pre.language-diff {
-  @apply text-gray-400 !important;
-}
-
-code.language-diff .token.deleted,
-pre.language-diff .token.deleted {
-  @apply text-code-red !important;
-}
-
-code.language-diff .token.inserted,
-pre.language-diff .token.inserted {
-  @apply text-code-green !important;
-}
-/* purgecss end ignore */
+/* purgecss end-ignore */
