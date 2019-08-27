@@ -47,7 +47,6 @@ ol {
   @apply leading-none;
   @apply p-2;
   @apply text-sm;
-  @apply whitespace-no-wrap;
   font-weight: 400;
 }
 /* purgecss end ignore */
