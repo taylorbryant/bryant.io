@@ -33,14 +33,14 @@ function Footer() {
             >
               Tailwind CSS
             </a>
-            . Read the code{` `}
+            .{` `}
             <a
               className="font-bold"
               href="https://github.com/taylorbryant/bryant.io"
               rel="noopener noreferrer"
               target="_blank"
             >
-              here
+              Read the code
             </a>
             .
           </p>
