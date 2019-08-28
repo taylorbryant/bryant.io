@@ -1,4 +1,4 @@
-import { format } from "date-fns";
+import { format, parseISO } from "date-fns";
 import Head from "next/head";
 import PropTypes from "prop-types";
 import React from "react";
@@ -77,7 +77,7 @@ function Post(props) {
 
       <HeroSection>
         <p className="mb-2 text-white tracking-widest uppercase">
-          {format(props.meta.date, `MMMM D, YYYY`)}
+          {format(parseISO(props.meta.date), `MMMM d, yyyy`)}
         </p>
         <h1 className="font-black leading-tight md:leading-normal mb-4 md:mb-0 text-4xl text-white">
           {props.meta.title}
