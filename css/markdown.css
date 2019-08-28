@@ -4,10 +4,10 @@
 }
 
 .markdown-body a {
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   @apply bg-gradient-green-blue;
   @apply font-black;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .markdown-body p {
@@ -24,13 +24,17 @@
 }
 
 .markdown-body h3 {
-  @apply font-black mb-2 mt-8 text-xl;
+  @apply font-black;
+  @apply mb-2;
+  @apply mt-8;
+  @apply text-xl;
 }
 
 .markdown-body ul,
 ol {
+  @apply leading-loose;
+  @apply pl-8;
   list-style: initial;
-  @apply leading-loose pl-8;
 }
 
 .markdown-body li {
@@ -38,7 +42,8 @@ ol {
 }
 
 .markdown-body img {
-  @apply mb-4 w-full;
+  @apply mb-4;
+  @apply w-full;
 }
 
 .markdown-body *:last-child {
@@ -59,4 +64,5 @@ ol {
 .markdown-body pre {
   @apply mb-4;
 }
+
 /* purgecss end ignore */

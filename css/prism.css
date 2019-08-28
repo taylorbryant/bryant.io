@@ -8,25 +8,31 @@
 
 code[class*="language-"],
 pre[class*="language-"] {
-  @apply font-mono scrolling-touch subpixel-antialiased text-code-white text-gray-200;
+  @apply font-mono;
+  @apply scrolling-touch;
+  @apply subpixel-antialiased;
+  @apply text-code-white;
+  @apply text-gray-200;
   direction: ltr;
+  hyphens: none;
+  line-height: 1.5;
+  tab-size: 4;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
-  line-height: 1.5;
-  tab-size: 4;
-  hyphens: none;
 }
 
 pre[class*="language-"] {
+  @apply p-4;
+  @apply rounded-lg;
   overflow: auto;
-  @apply p-4 rounded-lg;
 }
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-  @apply bg-gray-800 text-sm;
+  @apply bg-gray-800;
+  @apply text-sm;
 }
 
 code.language-js .token.regex,
@@ -59,8 +65,8 @@ pre.language-diff .token.inserted,
 }
 
 :not(pre) > code[class*="language-"] {
-  padding: 0.1em;
   border-radius: 0.3em;
+  padding: 0.1em;
 }
 
 .token.comment,
@@ -115,8 +121,8 @@ pre.language-bash .token.function {
 .token.rule,
 .token.important,
 .token.variable {
-  font-weight: inherit;
   @apply text-code-purple;
+  font-weight: inherit;
 }
 
 .token.bold {
