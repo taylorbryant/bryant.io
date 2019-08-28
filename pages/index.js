@@ -71,6 +71,7 @@ function Home() {
                 key={repository.name}
                 rel="noopener noreferrer"
                 target="_blank"
+                title={repository.name}
               >
                 <Card>
                   <div className="flex items-center justify-between mb-2">
@@ -98,7 +99,7 @@ function Home() {
 
           {posts.map(post => (
             <Link href={post.path} key={post.title}>
-              <a>
+              <a title={post.title}>
                 <Card>
                   <h2 className="font-black text-2xl mb-2">{post.title}</h2>
                   <p className="text-lg">{post.summary}</p>
