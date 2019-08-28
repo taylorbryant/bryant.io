@@ -1,0 +1,52 @@
+import Post from "../../components/post";
+
+export const meta = {
+  isPublished: false,
+  date: `2017-10-09`,
+  title: `Move files to the root of a Next.js project`,
+  summary: `Need to place a file like sitemap.xml in the root of your Next.js project? Here's one way to do it.`,
+  url: `/an-adventure-in-image-zooming`
+};
+
+export default Post;
+
+## Add a script to your project
+
+Create a file called `move-files-to-root-directory.js` in the root of your project. This script simply moves the files specified to the root directory.
+```javascript
+const fs = require(`fs`);
+
+fs.copyFile(`./public/sitemap.xml`, `./out/sitemap.xml`, err => {
+  if (err) throw err;
+  console.log(`sitemap.xml was copied to ./out`);
+});
+```
+
+## Add an npm script to your `package.json`
+
+Add a script to your `package.json`. I called it `post-export`, but you can call it whatever you like.
+```javascript
+// In your package.json
+{
+  ...
+  "scripts": {
+    ...
+    "post-export": "node move-public-files-to-root.js"
+  }
+  ...
+}
+```
+
+## Update your build command
+
+Update your build command to include the new npm script.
+
+For example, I host this website on Netlify. Before adding this script, my build command looked like:
+```bash
+npm run export
+```
+
+And after...
+```bash
+npm run export && npm run post-export
+```
