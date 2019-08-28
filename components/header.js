@@ -8,7 +8,9 @@ function Header() {
     <Container>
       <header className="flex items-center justify-between">
         <Link href="/">
-          <a className="font-black text-xl uppercase">Taylor Bryant</a>
+          <a className="font-black text-xl uppercase">
+            <img alt="Taylor Bryant" src="/static/images/logo.svg" />
+          </a>
         </Link>
 
         {/* <ul className="flex">
