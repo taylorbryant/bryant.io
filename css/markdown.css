@@ -6,15 +6,21 @@
 .markdown-body a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  @apply bg-gradient-green-blue font-black;
+  @apply bg-gradient-green-blue;
+  @apply font-black;
 }
 
 .markdown-body p {
-  @apply leading-loose mb-4 text-lg;
+  @apply leading-loose;
+  @apply mb-4;
+  @apply text-lg;
 }
 
 .markdown-body h2 {
-  @apply font-black mb-2 mt-8 text-3xl;
+  @apply font-black;
+  @apply mb-2;
+  @apply mt-8;
+  @apply text-3xl;
 }
 
 .markdown-body h3 {
@@ -49,5 +55,9 @@ ol {
   @apply text-sm;
   @apply whitespace-no-wrap;
   font-weight: 400;
+}
+
+.markdown-body pre {
+  @apply mb-4;
 }
 /* purgecss end ignore */
