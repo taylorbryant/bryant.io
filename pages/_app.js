@@ -4,8 +4,6 @@ import App from "next/app";
 import Head from "next/head";
 import Router from "next/router";
 
-import { withApollo } from "../components/with-apollo";
-
 const SEO_TITLE = `Taylor Bryant - Software Engineer`;
 const SEO_DESCRIPTION = `Taylor Bryant is a software engineer living in Memphis, TN. He builds software products using React, Next.js, and GraphQL.`;
 
@@ -116,4 +114,4 @@ class MyApp extends App {
   }
 }
 
-export default withApollo(MyApp);
+export default MyApp;
