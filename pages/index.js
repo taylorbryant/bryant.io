@@ -10,6 +10,7 @@ import Card from "../components/card";
 import Container from "../components/container";
 import HeroSection from "../components/hero-section";
 import Layout from "../components/layout";
+import { withApollo } from "../components/with-apollo";
 import posts from "../src/posts";
 
 const repositoriesQuery = gql`
@@ -107,4 +108,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default withApollo(Home);
