@@ -87,7 +87,6 @@ function Home() {
           )}
         </Container>
       </section>
-      )
       <section>
         <Container>
           <h2 className="font-black mb-4 md:mb-8 text-2xl uppercase">Blog</h2>
