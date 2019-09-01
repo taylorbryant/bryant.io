@@ -1,12 +1,16 @@
 /* eslint-env node */
-const fs = require(`fs`);
+const fs = require(`fs`).promises;
 
-fs.copyFile(`./public/_redirects`, `./out/_redirects`, err => {
-  if (err) throw err;
-  console.log(`_redirects was copied to ./out`);
-});
-
-fs.copyFile(`./public/sitemap.xml`, `./out/sitemap.xml`, err => {
-  if (err) throw err;
-  console.log(`sitemap.xml was copied to ./out`);
-});
+Promise.all(
+  [`_redirects`, `sitemap.xml`].map(fileName =>
+    fs
+      .copyFile(`./public/${fileName}`, `./out/${fileName}`)
+      .then(() => fileName)
+  )
+).then(fileNames =>
+  console.log(
+    `The following files in './public' were copied to './out': ${JSON.stringify(
+      fileNames
+    )}`
+  )
+);

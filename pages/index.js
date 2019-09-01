@@ -1,10 +1,10 @@
+import { useQuery } from "@apollo/react-hooks";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import gql from "graphql-tag";
 import { getOr } from "lodash/fp";
 import Link from "next/link";
 import React from "react";
-import { useQuery } from "urql";
 
 import Card from "../components/card";
 import Container from "../components/container";
@@ -36,15 +36,9 @@ const repositoriesQuery = gql`
 `;
 
 function Home() {
-  const [repositoriessResult] = useQuery({
-    query: repositoriesQuery
-  });
+  const { loading, data } = useQuery(repositoriesQuery);
 
-  const repositories = getOr(
-    [],
-    `data.viewer.repositories.edges`,
-    repositoriessResult
-  );
+  const repositories = getOr([], `viewer.repositories.edges`, data);
 
   return (
     <Layout>
@@ -57,15 +51,16 @@ function Home() {
           products using React, Next.js, and GraphQL.
         </p>
       </HeroSection>
+      <section className="mt-4">
+        <Container>
+          <h2 className="font-black mb-4 md:mb-8 text-2xl uppercase">
+            Open Source
+          </h2>
 
-      {repositoriessResult.loading ? null : (
-        <section className="mt-4">
-          <Container>
-            <h2 className="font-black mb-4 md:mb-8 text-2xl uppercase">
-              Open Source
-            </h2>
-
-            {repositories.map(({ node: repository }) => (
+          {loading ? (
+            <img src="/static/svg/loader.svg" />
+          ) : (
+            repositories.map(({ node: repository }) => (
               <a
                 href={repository.url}
                 key={repository.name}
@@ -88,11 +83,11 @@ function Home() {
                   <p className="text-lg">{repository.description}</p>
                 </Card>
               </a>
-            ))}
-          </Container>
-        </section>
-      )}
-
+            ))
+          )}
+        </Container>
+      </section>
+      )
       <section>
         <Container>
           <h2 className="font-black mb-4 md:mb-8 text-2xl uppercase">Blog</h2>

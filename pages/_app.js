@@ -3,32 +3,22 @@ import ReactGA from "react-ga";
 import App from "next/app";
 import Head from "next/head";
 import Router from "next/router";
-import { Provider } from "urql";
 
-import withUrqlClient from "../src/with-urql-client";
+import { withApollo } from "../components/with-apollo";
+
 const SEO_TITLE = `Taylor Bryant - Software Engineer`;
 const SEO_DESCRIPTION = `Taylor Bryant is a software engineer living in Memphis, TN. He builds software products using React, Next.js, and GraphQL.`;
 
 Router.events.on(`routeChangeComplete`, url => ReactGA.pageview(url));
 
 class MyApp extends App {
-  static async getInitialProps({ Component, ctx }) {
-    let pageProps = {};
-
-    if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx);
-    }
-
-    return { pageProps };
-  }
-
   componentDidMount() {
     ReactGA.initialize(`UA-111515120-4`);
     ReactGA.pageview(window.location.pathname + window.location.search);
   }
 
   render() {
-    const { Component, pageProps, urqlClient } = this.props;
+    const { Component, pageProps } = this.props;
 
     return (
       <>
@@ -120,12 +110,10 @@ class MyApp extends App {
           <meta content="#ffffff" name="theme-color" />
         </Head>
 
-        <Provider value={urqlClient}>
-          <Component {...pageProps} />
-        </Provider>
+        <Component {...pageProps} />
       </>
     );
   }
 }
 
-export default withUrqlClient(MyApp);
+export default withApollo(MyApp);
