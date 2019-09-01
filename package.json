@@ -1,6 +1,6 @@
 {
   "name": "bryant.io",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Personal website for Taylor Bryant",
   "main": "index.js",
   "scripts": {
@@ -48,7 +48,7 @@
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "1.2.0",
     "autoprefixer": "9.6.1",
-    "babel-eslint": "^10.0.3",
+    "babel-eslint": "10.0.3",
     "babel-plugin-macros": "2.6.1",
     "babel-plugin-preval": "3.0.1",
     "cssnano": "4.1.10",
