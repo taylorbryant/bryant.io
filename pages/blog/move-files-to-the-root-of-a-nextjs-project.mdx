@@ -1,8 +1,8 @@
 import Post from "../../components/post";
 
 export const meta = {
-  isPublished: false,
-  date: `2019-08-28`,
+  isPublished: true,
+  date: `2019-09-02`,
   title: `Move files to the root of a Next.js project`,
   summary: `Need to place a file like sitemap.xml in the root of your Next.js project? Here's one way to do it.`,
   url: `/move-files-to-the-root-of-a-nextjs-project`
@@ -10,43 +10,58 @@ export const meta = {
 
 export default Post;
 
+[Next.js](https://nextjs.org) is a framework built by [ZEIT](https://zeit.co) that allows you to easily build server-side rendered React applications. It provides automatic code splitting, simple client-side routing, and hot code reloading out of the box.
+
+By default, Next.js only sets up routes based on files in the `./pages` and `./static` directories. This is sufficient in most cases, but Next.js doesn't provide a simple way to expose files like favicons or a sitemap at the root of your app. Keep reading for a simple way to move your files to the root of a Next.js project.
+
 ## Add a script to your project
 
 Create a file called `move-files-to-root-directory.js` in the root of your project. This script simply moves the files specified to the root directory.
-```javascript
-const fs = require(`fs`);
 
-fs.copyFile(`./public/sitemap.xml`, `./out/sitemap.xml`, err => {
-  if (err) throw err;
-  console.log(`sitemap.xml was copied to ./out`);
-});
+```javascript
+const fs = require(`fs`).promises;
+
+Promise.all(
+  [`_redirects`, `sitemap.xml`].map(fileName =>
+    fs.copyFile(`./${fileName}`, `./out/${fileName}`).then(() => fileName)
+  )
+).then(fileNames =>
+  console.log(
+    `The following files in were copied to './out': ${JSON.stringify(
+      fileNames
+    )}`
+  )
+);
 ```
 
-## Add an npm script to your `package.json`
+## Add a script to your `package.json`
 
 Add a script to your `package.json`. I called it `post-export`, but you can call it whatever you like.
+
 ```javascript
 // In your package.json
 {
   ...
   "scripts": {
     ...
-    "post-export": "node move-public-files-to-root.js"
+    "post-export": "node move-files-to-root-directory.js"
   }
   ...
 }
 ```
 
-## Update your build command
+## Update your build command to use the script
 
 Update your build command to include the new npm script.
 
 For example, I host this website on Netlify. Before adding this script, my build command looked like:
+
 ```bash
 npm run export
 ```
 
 And after...
+
 ```bash
 npm run export && npm run post-export
 ```
