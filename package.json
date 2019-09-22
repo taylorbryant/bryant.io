@@ -1,6 +1,6 @@
 {
   "name": "bryant.io",
-  "version": "1.0.27",
+  "version": "1.0.28",
   "description": "Personal website for Taylor Bryant",
   "main": "index.js",
   "scripts": {
@@ -57,7 +57,7 @@
     "eslint-plugin-prettier": "3.1.1",
     "eslint-plugin-react": "7.14.3",
     "husky": "3.0.5",
-    "lint-staged": "9.2.5",
+    "lint-staged": "9.3.0",
     "postcss-import": "12.0.1",
     "prettier": "1.18.2",
     "tailwindcss": "1.1.1"
