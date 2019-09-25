@@ -1,6 +1,6 @@
 {
   "name": "bryant.io",
-  "version": "1.0.28",
+  "version": "1.0.29",
   "description": "Personal website for Taylor Bryant",
   "main": "index.js",
   "scripts": {
@@ -36,7 +36,7 @@
     "apollo-boost": "0.4.4",
     "date-fns": "2.2.1",
     "dotenv": "8.1.0",
-    "graphql": "14.5.7",
+    "graphql": "14.5.8",
     "isomorphic-unfetch": "3.0.0",
     "lodash": "4.17.15",
     "next": "9.0.6",
