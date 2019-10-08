@@ -29,7 +29,7 @@
     "@fortawesome/free-solid-svg-icons": "5.11.2",
     "@fortawesome/react-fontawesome": "0.1.5",
     "@mapbox/rehype-prism": "0.3.1",
-    "@mdx-js/loader": "1.5.0",
+    "@mdx-js/loader": "1.5.1",
     "@next/mdx": "9.1.0",
     "@types/react": "16.9.5",
     "@zeit/next-css": "1.0.1",
