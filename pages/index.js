@@ -59,7 +59,7 @@ function Home() {
           </h2>
 
           {loading ? (
-            <img src="/static/svg/loader.svg" />
+            <img src="/images/svg/loader.svg" />
           ) : (
             repositories.map(({ node: repository }) => (
               <a
