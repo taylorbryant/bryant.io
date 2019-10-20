@@ -3,7 +3,7 @@ const fs = require(`fs`);
 const path = require(`path`);
 
 const metaRegEx = /export\s+const\s+meta\s+=\s+(\{(\n|.)*?\n\})/;
-const directory = path.join(process.cwd(), `./pages/blog/`);
+const directory = path.join(process.cwd(), `./src/pages/blog/`);
 const files = fs.readdirSync(directory).filter(file => file.endsWith(`.mdx`));
 
 module.exports = files
