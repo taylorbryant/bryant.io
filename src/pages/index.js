@@ -44,7 +44,7 @@ function Home() {
   return (
     <Layout>
       <HeroSection>
-        <h1 className="font-black text-4xl text-white">
+        <h1 className="font-black text-2xl md:text-4xl sm:text-3xl text-white">
           Hi, I&#39;m Taylor Bryant.
         </h1>
         <p className="text-2xl text-white">
