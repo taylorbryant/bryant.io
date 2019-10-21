@@ -44,17 +44,17 @@ function Home() {
   return (
     <Layout>
       <HeroSection>
-        <h1 className="font-black text-2xl md:text-4xl sm:text-3xl text-white">
+        <h1 className="font-black text-2xl sm:text-3xl md:text-4xl text-white">
           Hi, I&#39;m Taylor Bryant.
         </h1>
-        <p className="text-2xl text-white">
+        <p className="text-xl sm:text-2xl text-white">
           I&#39;m a software engineer from Memphis, TN. I build software
           products using React, Next.js, and GraphQL.
         </p>
       </HeroSection>
       <section className="mt-4">
         <Container>
-          <h2 className="font-black mb-4 md:mb-8 text-2xl uppercase">
+          <h2 className="font-black mb-4 md:mb-8 text-xl sm:text-2xl uppercase">
             Open Source
           </h2>
 
@@ -71,7 +71,7 @@ function Home() {
               >
                 <Card>
                   <div className="flex items-center justify-between mb-2">
-                    <h2 className="font-black text-2xl">
+                    <h2 className="font-black text-xl sm:text-2xl">
                       {`${repository.name}`}
                     </h2>
                     <div className="flex items-center justify-end">
@@ -90,13 +90,17 @@ function Home() {
       </section>
       <section>
         <Container>
-          <h2 className="font-black mb-4 md:mb-8 text-2xl uppercase">Blog</h2>
+          <h2 className="font-black mb-4 md:mb-8 text-xl sm:text-2xl uppercase">
+            Blog
+          </h2>
 
           {posts.map(post => (
             <Link href={post.path} key={post.title}>
               <a title={post.title}>
                 <Card>
-                  <h2 className="font-black text-2xl mb-2">{post.title}</h2>
+                  <h2 className="font-black text-xl sm:text-2xl mb-2">
+                    {post.title}
+                  </h2>
                   <p className="text-lg">{post.summary}</p>
                 </Card>
               </a>
