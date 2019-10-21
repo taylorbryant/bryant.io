@@ -52,13 +52,16 @@ ol {
 }
 
 .markdown-body :not(pre) code {
-  @apply align-baseline;
-  @apply bg-yellow-400;
-  @apply font-mono;
+  border-radius: 1em 0 1em 0;
+  background-image: linear-gradient(
+    -100deg,
+    rgba(246, 224, 94, 0.3),
+    rgba(246, 224, 94, 0.7) 95%,
+    rgba(246, 224, 94, 0.1)
+  );
+  @apply font-sans;
   @apply inline-block;
   @apply leading-none;
-  @apply p-2;
-  @apply text-sm;
   font-weight: 400;
 }
 
