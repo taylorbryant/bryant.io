@@ -9,7 +9,13 @@ function Header() {
       <header className="flex items-center justify-between">
         <Link href="/">
           <a className="font-black text-xl uppercase">
-            <img alt="Taylor Bryant" src="/images/svg/logo.svg" />
+            <img
+              alt="Taylor Bryant"
+              height="73"
+              loading="lazy"
+              src="/images/svg/logo.svg"
+              width="103"
+            />
           </a>
         </Link>
 
