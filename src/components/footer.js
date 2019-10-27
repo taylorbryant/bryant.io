@@ -12,7 +12,7 @@ function Footer() {
   return (
     <footer className="bg-gradient-green-blue">
       <Container>
-        <nav className="flex items-center justify-between text-sm text-white">
+        <nav className="flex flex-col md:flex-row items-center justify-between text-sm text-white">
           <p>
             Built using{` `}
             <a
@@ -45,7 +45,7 @@ function Footer() {
             .
           </p>
 
-          <ul className="flex">
+          <ul className="flex mt-4 md:mt-0">
             {[
               { url: `https://github.com/taylorbryant`, icon: faGithub },
               { url: `https://twitter.com/tayl_rbryant`, icon: faTwitter },

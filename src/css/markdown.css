@@ -21,7 +21,7 @@
   @apply font-black;
   @apply mb-2;
   @apply mt-8;
-  @apply text-3xl;
+  @apply text-2xl;
 }
 
 .markdown-body h3 {
@@ -29,6 +29,12 @@
   @apply mb-2;
   @apply mt-8;
   @apply text-xl;
+}
+
+@screen md {
+  .markdown-body h2 {
+    @apply text-3xl;
+  }
 }
 
 .markdown-body ul,
