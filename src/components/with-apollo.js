@@ -3,12 +3,10 @@
 import { ApolloProvider } from "@apollo/react-hooks";
 import { ApolloClient, InMemoryCache, HttpLink } from "apollo-boost";
 import fetch from "isomorphic-unfetch";
-import getConfig from "next/config";
 import Head from "next/head";
 import React, { useMemo } from "react";
 
 let apolloClient = null;
-const { publicRuntimeConfig } = getConfig();
 
 /**
  * Creates and provides the apolloContext
@@ -127,7 +125,7 @@ function createApolloClient(initialState = {}) {
       uri: `https://api.github.com/graphql`, // Server URL (must be absolute)
       credentials: `same-origin`, // Additional fetch() options like `credentials` or `headers`
       headers: {
-        Authorization: `Bearer ${publicRuntimeConfig.GITHUB_API_TOKEN}`
+        Authorization: `Bearer ${process.env.GITHUB_API_TOKEN}`
       },
       // Use fetch() polyfill on the server
       fetch: !isBrowser && fetch

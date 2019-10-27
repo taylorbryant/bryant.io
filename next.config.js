@@ -12,7 +12,7 @@ const withMDX = require(`@next/mdx`)({
 module.exports = withCSS(
   withMDX({
     pageExtensions: [`js`, `md`, `mdx`],
-    publicRuntimeConfig: {
+    env: {
       GITHUB_API_TOKEN: process.env.GITHUB_API_TOKEN
     }
   })
