@@ -43,7 +43,7 @@ function Home() {
   return (
     <Layout>
       <HeroSection>
-        <h1 className="font-black text-2xl sm:text-3xl md:text-4xl text-white">
+        <h1 className="font-black leading-tight md:leading-normal text-2xl sm:text-3xl md:text-4xl text-white">
           Hi, I&#39;m Taylor Bryant.
         </h1>
 
