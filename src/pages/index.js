@@ -38,7 +38,6 @@ const repositoriesQuery = gql`
 
 function Home() {
   const { loading, data } = useQuery(repositoriesQuery);
-
   const repositories = getOr([], `viewer.repositories.edges`, data);
 
   return (
@@ -47,11 +46,13 @@ function Home() {
         <h1 className="font-black text-2xl sm:text-3xl md:text-4xl text-white">
           Hi, I&#39;m Taylor Bryant.
         </h1>
+
         <p className="text-xl sm:text-2xl text-white">
           I&#39;m a software engineer from Memphis, TN. I build software
           products using React, Next.js, and GraphQL.
         </p>
       </HeroSection>
+
       <section className="mt-4">
         <Container>
           <h2 className="font-black mb-4 md:mb-8 text-xl sm:text-2xl uppercase">
@@ -74,6 +75,7 @@ function Home() {
                     <h2 className="font-black text-xl sm:text-2xl">
                       {`${repository.name}`}
                     </h2>
+
                     <div className="flex items-center justify-end">
                       <FontAwesomeIcon className="h-5 mr-2 w-5" icon={faStar} />
                       <p className="text-lg">
@@ -81,6 +83,7 @@ function Home() {
                       </p>
                     </div>
                   </div>
+
                   <p className="text-lg">{repository.description}</p>
                 </Card>
               </a>
@@ -88,6 +91,7 @@ function Home() {
           )}
         </Container>
       </section>
+
       <section>
         <Container>
           <h2 className="font-black mb-4 md:mb-8 text-xl sm:text-2xl uppercase">
@@ -101,6 +105,7 @@ function Home() {
                   <h2 className="font-black text-xl sm:text-2xl mb-2">
                     {post.title}
                   </h2>
+
                   <p className="text-lg">{post.summary}</p>
                 </Card>
               </a>
