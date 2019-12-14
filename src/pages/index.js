@@ -10,7 +10,7 @@ import Card from "../components/card";
 import Container from "../components/container";
 import HeroSection from "../components/hero-section";
 import Layout from "../components/layout";
-import { withApollo } from "../components/with-apollo";
+import { withApollo } from "../lib/apollo";
 import posts from "../posts";
 
 const repositoriesQuery = gql`
@@ -43,7 +43,7 @@ function Home() {
   return (
     <Layout>
       <HeroSection>
-        <h1 className="font-black leading-tight md:leading-normal text-2xl sm:text-3xl md:text-4xl text-white">
+        <h1 className="font-black tracking-tight md:leading-normal text-2xl sm:text-3xl md:text-4xl text-white">
           Hi, I&#39;m Taylor Bryant.
         </h1>
 
@@ -55,7 +55,7 @@ function Home() {
 
       <section className="mt-4">
         <Container>
-          <h2 className="font-black mb-4 md:mb-8 text-xl sm:text-2xl uppercase">
+          <h2 className="font-black tracking-tight mb-4 md:mb-8 text-xl sm:text-2xl uppercase">
             Open Source
           </h2>
 
@@ -72,7 +72,7 @@ function Home() {
               >
                 <Card>
                   <div className="flex items-center justify-between mb-2">
-                    <h2 className="font-black text-xl sm:text-2xl">
+                    <h2 className="font-black leading-tight text-xl sm:text-2xl">
                       {`${repository.name}`}
                     </h2>
 
@@ -94,7 +94,7 @@ function Home() {
 
       <section>
         <Container>
-          <h2 className="font-black mb-4 md:mb-8 text-xl sm:text-2xl uppercase">
+          <h2 className="font-black tracking-tight mb-4 md:mb-8 text-xl sm:text-2xl uppercase">
             Blog
           </h2>
 
@@ -102,7 +102,7 @@ function Home() {
             <Link href={post.path} key={post.title}>
               <a title={post.title}>
                 <Card>
-                  <h2 className="font-black text-xl sm:text-2xl mb-2">
+                  <h2 className="font-black tracking-tight text-xl sm:text-2xl mb-2">
                     {post.title}
                   </h2>
 
