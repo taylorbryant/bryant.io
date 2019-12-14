@@ -11,7 +11,7 @@ import Container from "../components/container";
 import HeroSection from "../components/hero-section";
 import Layout from "../components/layout";
 import { withApollo } from "../lib/apollo";
-import posts from "../posts";
+import posts from "../lib/posts";
 
 const repositoriesQuery = gql`
   query getRepositories {
