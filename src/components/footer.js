@@ -12,7 +12,7 @@ function Footer() {
   return (
     <footer className="bg-gradient-green-blue">
       <Container>
-        <nav className="flex flex-col md:flex-row items-center justify-between text-sm text-white">
+        <nav className="flex flex-col items-center justify-between text-sm text-white md:flex-row">
           <p>
             Built using{` `}
             <a
@@ -56,7 +56,7 @@ function Footer() {
             ].map(item => (
               <li className="ml-8" key={item.url}>
                 <a href={item.url} rel="noopener noreferrer" target="_blank">
-                  <FontAwesomeIcon className="h-8 w-8" icon={item.icon} />
+                  <FontAwesomeIcon className="w-8 h-8" icon={item.icon} />
                 </a>
               </li>
             ))}

@@ -43,11 +43,11 @@ function Home() {
   return (
     <Layout>
       <HeroSection>
-        <h1 className="font-black tracking-tight md:leading-normal text-2xl sm:text-3xl md:text-4xl text-white">
+        <h1 className="text-2xl font-black tracking-tight text-white md:leading-normal sm:text-3xl md:text-4xl">
           Hi, I&#39;m Taylor Bryant.
         </h1>
 
-        <p className="text-xl sm:text-2xl text-white">
+        <p className="text-xl text-white sm:text-2xl">
           I&#39;m a software engineer from Memphis, TN. I build software
           products using React, Next.js, and GraphQL.
         </p>
@@ -55,7 +55,7 @@ function Home() {
 
       <section className="mt-4">
         <Container>
-          <h2 className="font-black tracking-tight mb-4 md:mb-8 text-xl sm:text-2xl uppercase">
+          <h2 className="mb-4 text-xl font-black tracking-tight uppercase md:mb-8 sm:text-2xl">
             Open Source
           </h2>
 
@@ -72,12 +72,12 @@ function Home() {
               >
                 <Card>
                   <div className="flex items-center justify-between mb-2">
-                    <h2 className="font-black leading-tight text-xl sm:text-2xl">
+                    <h2 className="text-xl font-black leading-tight sm:text-2xl">
                       {`${repository.name}`}
                     </h2>
 
                     <div className="flex items-center justify-end">
-                      <FontAwesomeIcon className="h-5 mr-2 w-5" icon={faStar} />
+                      <FontAwesomeIcon className="w-5 h-5 mr-2" icon={faStar} />
                       <p className="text-lg">
                         {repository.stargazers.totalCount}
                       </p>
@@ -94,7 +94,7 @@ function Home() {
 
       <section>
         <Container>
-          <h2 className="font-black tracking-tight mb-4 md:mb-8 text-xl sm:text-2xl uppercase">
+          <h2 className="mb-4 text-xl font-black tracking-tight uppercase md:mb-8 sm:text-2xl">
             Blog
           </h2>
 
@@ -102,7 +102,7 @@ function Home() {
             <Link href={post.path} key={post.title}>
               <a title={post.title}>
                 <Card>
-                  <h2 className="font-black tracking-tight text-xl sm:text-2xl mb-2">
+                  <h2 className="mb-2 text-xl font-black tracking-tight sm:text-2xl">
                     {post.title}
                   </h2>
 

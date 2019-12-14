@@ -3,7 +3,7 @@ import React from "react";
 
 function Card(props) {
   return (
-    <article className="bg-yellow-400 p-4 md:p-8 border-black my-4">
+    <article className="p-4 my-4 bg-yellow-400 border-black md:p-8">
       {props.children}
     </article>
   );

@@ -8,7 +8,7 @@ function Header() {
     <Container>
       <header className="flex items-center justify-between">
         <Link href="/">
-          <a className="font-black text-xl uppercase">
+          <a className="text-xl font-black uppercase">
             <img
               alt="Taylor Bryant"
               height="73"
@@ -23,7 +23,7 @@ function Header() {
           {[
             { title: "Home", route: "/" }
           ].map(navigationItem => (
-            <li className="font-black  ml-6 uppercase" key={navigationItem.title}>
+            <li className="ml-6 font-black uppercase " key={navigationItem.title}>
               <Link href={navigationItem.route}>
                 <a>{navigationItem.title}</a>
               </Link>
