@@ -1,9 +1,10 @@
+import "../css/index.css";
+
 import PropTypes from "prop-types";
 import React from "react";
 
-import Header from "./header";
 import Footer from "./footer";
-import "../css/index.css";
+import Header from "./header";
 
 function Layout(props) {
   return (

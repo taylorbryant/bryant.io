@@ -1,8 +1,8 @@
-import React from "react";
-import ReactGA from "react-ga";
 import App from "next/app";
 import Head from "next/head";
 import Router from "next/router";
+import React from "react";
+import ReactGA from "react-ga";
 
 const SEO_TITLE = `Taylor Bryant - Software Engineer`;
 const SEO_DESCRIPTION = `Taylor Bryant is a software engineer living in Memphis, TN. He builds software products using React, Next.js, and GraphQL.`;

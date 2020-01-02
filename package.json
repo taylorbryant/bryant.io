@@ -6,7 +6,11 @@
     "dev": "next",
     "build": "next build",
     "export": "npm run build && next export",
-    "start": "next start"
+    "start": "next start",
+    "fix:import-sort": "import-sort --write '**/*.js'",
+    "fix:lint": "eslint --ext .jsx --ext .js . --fix",
+    "fix:prettier": "prettier --write '**/*.{js,css,md,mdx}'",
+    "fix": "npm run fix:lint && npm run fix:prettier && npm run fix:import-sort"
   },
   "repository": {
     "type": "git",
@@ -55,9 +59,14 @@
     "cssnano": "4.1.10",
     "eslint": "6.8.0",
     "eslint-plugin-import": "2.19.1",
+    "eslint-plugin-jsx-a11y": "6.2.3",
     "eslint-plugin-prettier": "3.1.2",
     "eslint-plugin-react": "7.17.0",
+    "eslint-plugin-react-hooks": "2.3.0",
     "husky": "3.1.0",
+    "import-sort-cli": "6.0.0",
+    "import-sort-parser-babylon": "6.0.0",
+    "import-sort-style-module": "6.0.0",
     "lint-staged": "9.5.0",
     "postcss-import": "12.0.1",
     "prettier": "1.19.1",

@@ -1,6 +1,6 @@
 import { useQuery } from "@apollo/react-hooks";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import gql from "graphql-tag";
 import { getOr } from "lodash/fp";
 import Link from "next/link";
@@ -11,6 +11,7 @@ import Container from "../components/container";
 import HeroSection from "../components/hero-section";
 import Layout from "../components/layout";
 import { withApollo } from "../lib/apollo";
+// eslint-disable-next-line import/default
 import posts from "../lib/posts";
 
 const repositoriesQuery = gql`
@@ -60,7 +61,7 @@ function Home() {
           </h2>
 
           {loading ? (
-            <img src="/images/svg/loader.svg" />
+            <img alt="Loading..." src="/images/svg/loader.svg" />
           ) : (
             repositories.map(({ node: repository }) => (
               <a
