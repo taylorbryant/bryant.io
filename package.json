@@ -63,7 +63,7 @@
     "eslint-plugin-prettier": "3.1.2",
     "eslint-plugin-react": "7.18.0",
     "eslint-plugin-react-hooks": "2.3.0",
-    "husky": "4.0.9",
+    "husky": "4.0.10",
     "import-sort-cli": "6.0.0",
     "import-sort-parser-babylon": "6.0.0",
     "import-sort-style-module": "6.0.0",
