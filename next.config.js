@@ -1,7 +1,6 @@
 /*eslint-env node*/
 require(`dotenv`).config();
 const rehypePrism = require(`@mapbox/rehype-prism`);
-const withCSS = require(`@zeit/next-css`);
 const withMDX = require(`@next/mdx`)({
   extension: /\.mdx?$/,
   options: {
@@ -9,11 +8,9 @@ const withMDX = require(`@next/mdx`)({
   }
 });
 
-module.exports = withCSS(
-  withMDX({
-    pageExtensions: [`js`, `md`, `mdx`],
-    env: {
-      GITHUB_API_TOKEN: process.env.GITHUB_API_TOKEN
-    }
-  })
-);
+module.exports = withMDX({
+  pageExtensions: [`js`, `md`, `mdx`],
+  env: {
+    GITHUB_API_TOKEN: process.env.GITHUB_API_TOKEN
+  }
+});

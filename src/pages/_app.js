@@ -1,3 +1,5 @@
+import "../css/index.css";
+
 import App from "next/app";
 import Head from "next/head";
 import Router from "next/router";

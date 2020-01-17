@@ -1,5 +1,3 @@
-import "../css/index.css";
-
 import PropTypes from "prop-types";
 import React from "react";
 
