@@ -1,0 +1,19 @@
+import Post from "../../components/post";
+
+export const meta = {
+  isPublished: true,
+  date: `2020-01-26`,
+  title: `Optimize your PRs for revertability`,
+  summary: `Any change unrelated to your work deserves its own PR`,
+  url: `/optimize-your-prs-for-revertability`
+};
+
+export default Post;
+
+Imagine you've grabbed a GitHub issue called `Add a last name field to the signup form` from your issue backlog. While you're adding code to display a last name field, you realize that there's another React component named `Heder` instead of `Header`. You add the last name field, and you fix the spelling of `Header`. You submit a PR. Your teammates love the changes, and you merge them into master.
+
+Thirty minutes later, a new error pops up in your error tracking service. There was an error in your code, and new users can't sign up! Your team decides the best move is to revert the PR. You revert the PR. But wait! You just changed `Header` back to `Heder`.
+
+When working on a new feature area, you will undoubtedly find some areas in your existing codebase that can be improved. If you feel the need to improve some code you come across that's unrelated to the feature you're working on, make the changes in a separate PR.
+
+Thinking in terms of revertability allows you to establish clear boundaries between changes and will result in PRs that are easier for your teammates to review.

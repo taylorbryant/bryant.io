@@ -38,6 +38,7 @@ const repositoriesQuery = gql`
 `;
 
 function Home() {
+  console.log(posts);
   const { loading, data } = useQuery(repositoriesQuery);
   const repositories = getOr([], `viewer.repositories.edges`, data);
 
@@ -49,14 +50,14 @@ function Home() {
         </h1>
 
         <p className="text-xl text-white sm:text-2xl">
-          I&#39;m a software engineer from Memphis, TN. I build software
-          products using React, Next.js, and GraphQL.
+          I&#39;m a software engineer at Livestock Nutrition Center. I build
+          software products using React, Next.js, and GraphQL.
         </p>
       </HeroSection>
 
       <section className="mt-4">
         <Container>
-          <h2 className="mb-4 text-xl font-black tracking-tight uppercase md:mb-8 sm:text-2xl">
+          <h2 className="py-2 text-xl font-black tracking-tight text-center uppercase bg-yellow-400 sm:text-2xl">
             Open Source
           </h2>
 
@@ -95,7 +96,7 @@ function Home() {
 
       <section>
         <Container>
-          <h2 className="mb-4 text-xl font-black tracking-tight uppercase md:mb-8 sm:text-2xl">
+          <h2 className="py-2 text-xl font-black tracking-tight text-center uppercase bg-yellow-400 sm:text-2xl">
             Blog
           </h2>
 
