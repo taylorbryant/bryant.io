@@ -7,7 +7,7 @@ function AboutPage() {
   return (
     <PageLayout>
       <div className="flex flex-col justify-center">
-        <div className="mb-9">
+        <div className="mb-6 md:mb-9">
           <img
             alt="An illustration of Taylor Bryant and his cat Caspian"
             height="250"
@@ -17,7 +17,7 @@ function AboutPage() {
         </div>
 
         <div>
-          <h2 className="mb-3 text-3xl font-bold">
+          <h2 className="mb-3 text-2xl font-bold md:text-3xl">
             Hi, my name is{` `}
             <span className="px-2 py-1 bg-secondary">Taylor Bryant</span>.
           </h2>
