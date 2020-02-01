@@ -1,57 +1,46 @@
 /* purgecss start ignore */
 .markdown-body {
-  @apply text-xl;
-  @apply tracking-tight;
-}
-
-.markdown-body a {
-  @apply bg-gradient-green-blue;
-  @apply font-black;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  @apply text-lg;
+  @apply leading-relaxed;
 }
 
 .markdown-body p {
-  @apply leading-normal;
-  @apply mb-4;
-  @apply text-xl;
+  @apply mb-6;
+}
+
+.markdown-body h2,
+.markdown-body h3 {
+  @apply leading-tight;
+  @apply tracking-tight;
+  @apply font-bold;
+  @apply mb-3;
+  @apply mt-9;
 }
 
 .markdown-body h2 {
-  @apply tracking-tight;
-  @apply font-black;
-  @apply mb-2;
-  @apply mt-8;
   @apply text-2xl;
 }
 
 .markdown-body h3 {
-  @apply tracking-tight;
-  @apply font-black;
-  @apply mb-2;
-  @apply mt-8;
   @apply text-xl;
-}
-
-@screen md {
-  .markdown-body h2 {
-    @apply text-3xl;
-  }
 }
 
 .markdown-body ul,
 ol {
-  @apply leading-normal;
-  @apply pl-8;
+  @apply pl-6;
   list-style: initial;
 }
 
+.markdown-body li:not(:first-child) {
+  @apply mt-4;
+}
+
 .markdown-body li {
-  @apply my-2;
+  @apply mb-4;
 }
 
 .markdown-body img {
-  @apply mb-4;
+  @apply mb-6;
   @apply w-full;
 }
 
@@ -60,21 +49,16 @@ ol {
 }
 
 .markdown-body :not(pre) code {
-  border-radius: 1em 0 1em 0;
-  background-image: linear-gradient(
-    -100deg,
-    rgba(246, 224, 94, 0.3),
-    rgba(246, 224, 94, 0.7) 95%,
-    rgba(246, 224, 94, 0.1)
-  );
-  @apply font-sans;
-  @apply inline-block;
+  font-size: 0.8em;
+  @apply bg-light;
+  @apply px-2;
+  @apply py-1;
+  @apply whitespace-pre-wrap;
+  @apply font-mono;
   @apply leading-none;
-  font-weight: 400;
 }
 
 .markdown-body pre {
-  @apply mb-4;
+  @apply mb-6;
 }
-
 /* purgecss end ignore */

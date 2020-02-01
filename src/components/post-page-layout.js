@@ -3,13 +3,11 @@ import Head from "next/head";
 import PropTypes from "prop-types";
 import React from "react";
 
-import Container from "./container";
-import HeroSection from "./hero-section";
-import Layout from "./layout";
+import PageLayout from "./page-layout";
 
-function Post(props) {
+function PostPageLayout(props) {
   return (
-    <Layout>
+    <PageLayout>
       <Head>
         {/* HTML Meta Tags */}
         <title key="html-meta-title">{`Taylor Bryant - ${props.meta.title}`}</title>
@@ -75,26 +73,24 @@ function Post(props) {
         />
       </Head>
 
-      <HeroSection>
-        <p className="mb-2 tracking-widest text-white uppercase">
+      <div className="flex-col">
+        <p className="mb-3 text-sm tracking-widest uppercase">
           {format(parseISO(props.meta.date), `MMMM d, yyyy`)}
         </p>
-        <h1 className="text-2xl font-black leading-tight text-white md:leading-normal sm:text-3xl md:text-4xl">
+
+        <h1 className="text-2xl font-bold leading-tight mb-9">
           {props.meta.title}
         </h1>
-        <p className="text-xl text-white sm:text-2xl">{props.meta.summary}</p>
-      </HeroSection>
 
-      <Container>
-        <div className="my-4 markdown-body">{props.children}</div>
-      </Container>
-    </Layout>
+        <div className="markdown-body">{props.children}</div>
+      </div>
+    </PageLayout>
   );
 }
 
-Post.propTypes = {
+PostPageLayout.propTypes = {
   children: PropTypes.node.isRequired,
   meta: PropTypes.object.isRequired
 };
 
-export default Post;
+export default PostPageLayout;

@@ -1,13 +1,8 @@
 /* purgecss start ignore */
-body {
-  @apply text-gray-900;
-}
-
-.bg-gradient-green-blue {
-  background-image: linear-gradient(
-    99deg,
-    hsl(207.20000000000005, 72.6%, 57.1%) 22%,
-    hsl(177, 52.1%, 45.9%) 56%
-  );
+a {
+  @apply font-bold;
+  @apply underline;
+  text-decoration-thickness: 1em;
+  text-underline-offset: 1.5px;
 }
 /* purgecss end ignore */
