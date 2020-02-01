@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React from "react";
 
 import PageLayout from "./page-layout";
@@ -15,5 +16,10 @@ function IndexPageLayout({ children, title }) {
     </PageLayout>
   );
 }
+
+IndexPageLayout.propTypes = {
+  children: PropTypes.node.isRequired,
+  title: PropTypes.string.isRequired
+};
 
 export default IndexPageLayout;

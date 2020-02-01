@@ -1,9 +1,9 @@
 import Link from "next/link";
 import React from "react";
 
+import IndexPageLayout from "../components/index-page-layout";
 // eslint-disable-next-line import/default
 import posts from "../lib/posts";
-import IndexPageLayout from "../components/index-page-layout";
 
 function WritingPage() {
   return (
