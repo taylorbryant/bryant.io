@@ -78,7 +78,7 @@ function PostPageLayout(props) {
           {format(parseISO(props.meta.date), `MMMM d, yyyy`)}
         </p>
 
-        <h1 className="text-2xl font-bold leading-tight mb-9">
+        <h1 className="mb-6 text-2xl font-bold leading-tight">
           {props.meta.title}
         </h1>
 

@@ -5,19 +5,19 @@ import React from "react";
 function PageLayout({ children }) {
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="flex items-center justify-between w-full max-w-2xl p-6 mx-auto">
+      <header className="flex flex-col w-full max-w-2xl p-3 mx-auto md:p-6 md:items-center md:justify-between md:flex-row">
         <Link href="/">
-          <a className="px-2 py-1 text-2xl no-underline bg-primary">
+          <a className="text-2xl no-underline md:px-2 md:py-1 md:bg-primary">
             bryant.io
           </a>
         </Link>
-        <ul className="flex">
+        <ul className="flex mt-3 md:mt-0">
           {[
             { route: `/`, label: `Home` },
             { route: `/writing`, label: `Writing` },
             { route: `/projects`, label: `Projects` }
           ].map(({ route, label }) => (
-            <li className="ml-6" key={route}>
+            <li className="mr-6 md:mr-0 md:ml-6" key={route}>
               <Link href={route}>
                 <a>{label}</a>
               </Link>
@@ -26,9 +26,11 @@ function PageLayout({ children }) {
         </ul>
       </header>
 
-      <main className="flex-1 w-full max-w-2xl p-6 mx-auto">{children}</main>
+      <main className="flex-1 w-full max-w-2xl p-3 mx-auto md:p-6">
+        {children}
+      </main>
 
-      <footer className="w-full max-w-2xl p-6 mx-auto text-sm">
+      <footer className="w-full max-w-2xl p-3 mx-auto text-sm md:p-6">
         Built using{` `}
         <a href="">Next.js</a>
         {` `}
