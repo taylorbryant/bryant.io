@@ -1,4 +1,4 @@
 {
   "presets": ["next/babel"],
-  "plugins": ["macros", "graphql-tag"]
+  "plugins": ["macros"]
 }
