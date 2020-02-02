@@ -10,11 +10,11 @@ function WritingPage() {
     <IndexPageLayout title="Writing">
       {posts.map(post => (
         <article className="mb-6" key={post.title}>
-          <h3 className="mb-3 text-xl">
+          <h1 className="mb-3 text-xl">
             <Link href={post.path}>
               <a>{post.title}</a>
             </Link>
-          </h3>
+          </h1>
           <p className="leading-relaxed">{post.summary}</p>
         </article>
       ))}
