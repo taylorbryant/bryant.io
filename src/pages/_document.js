@@ -9,7 +9,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html itemscope itemtype="http://schema.org/WebPage" lang="en-US">
+      <Html itemscope="true" itemtype="http://schema.org/WebPage" lang="en-US">
         <Head />
         <body>
           <Main />
