@@ -6,6 +6,7 @@ function ProjectsPage() {
   return (
     <IndexPageLayout title="Projects">
       <section>
+        <h1 className="mb-3 text-2xl font-bold">Live</h1>
         {[
           {
             name: `Next Starter Tailwind`,
@@ -29,18 +30,18 @@ function ProjectsPage() {
           }
         ].map(project => (
           <article className="mb-6" key={project.name}>
-            <h3 className="mb-3 text-xl">
+            <h1 className="mb-3 text-xl">
               <a href={project.url} rel="noopener noreferrer" target="_blank">
                 {project.name}
               </a>
-            </h3>
+            </h1>
             <p className="leading-relaxed">{project.description}</p>
           </article>
         ))}
       </section>
 
       <section className="mt-9">
-        <h2 className="mb-3 text-2xl font-bold">In progress</h2>
+        <h1 className="mb-3 text-2xl font-bold">In progress</h1>
         {[
           {
             name: `Haunter`,
@@ -56,7 +57,7 @@ function ProjectsPage() {
           }
         ].map(project => (
           <article className="mb-6" key={project.name}>
-            <h3 className="mb-3 text-xl font-bold">{project.name}</h3>
+            <h1 className="mb-3 text-xl font-bold">{project.name}</h1>
             <p className="leading-relaxed">{project.description}</p>
           </article>
         ))}

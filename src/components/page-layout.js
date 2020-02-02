@@ -6,11 +6,13 @@ function PageLayout({ children }) {
   return (
     <div className="flex flex-col min-h-screen">
       <header className="flex flex-col w-full max-w-2xl p-3 mx-auto md:p-6 md:items-center md:justify-between md:flex-row">
-        <Link href="/">
-          <a className="text-2xl no-underline md:px-2 md:py-1 md:bg-primary">
-            bryant.io
-          </a>
-        </Link>
+        <h1>
+          <Link href="/">
+            <a className="text-2xl no-underline md:px-2 md:py-1 md:bg-primary">
+              bryant.io
+            </a>
+          </Link>
+        </h1>
         <nav className="mt-3 md:mt-0">
           <ul className="flex ">
             {[
