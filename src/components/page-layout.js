@@ -14,6 +14,7 @@ function PageLayout({ children }) {
           </Link>
         </h1>
         <nav className="mt-3 md:mt-0">
+          <h1 className="sr-only">Main navigation</h1>
           <ul className="flex ">
             {[
               { route: `/`, label: `Home` },
