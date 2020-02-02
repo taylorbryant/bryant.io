@@ -13,13 +13,14 @@ function HomePage() {
   return (
     <PageLayout>
       <section className="flex flex-col justify-center">
-        <img
-          alt="An illustration of Taylor Bryant and his cat Caspian"
-          className="mb-6 md:mb-9"
-          height="250"
-          src="/images/me-square.png"
-          width="250"
-        />
+        <figure className="mb-6 md:mb-9">
+          <img
+            alt="An illustration of Taylor Bryant and his cat Caspian"
+            height="250"
+            src="/images/me-square.png"
+            width="250"
+          />
+        </figure>
 
         <h1 className="mb-3 text-2xl font-bold md:text-3xl">
           Hi, my name is{` `}
