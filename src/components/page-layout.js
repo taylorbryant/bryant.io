@@ -11,19 +11,21 @@ function PageLayout({ children }) {
             bryant.io
           </a>
         </Link>
-        <ul className="flex mt-3 md:mt-0">
-          {[
-            { route: `/`, label: `Home` },
-            { route: `/writing`, label: `Writing` },
-            { route: `/projects`, label: `Projects` }
-          ].map(({ route, label }) => (
-            <li className="mr-6 md:mr-0 md:ml-6" key={route}>
-              <Link href={route}>
-                <a>{label}</a>
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <nav className="mt-3 md:mt-0">
+          <ul className="flex ">
+            {[
+              { route: `/`, label: `Home` },
+              { route: `/writing`, label: `Writing` },
+              { route: `/projects`, label: `Projects` }
+            ].map(({ route, label }) => (
+              <li className="mr-6 md:mr-0 md:ml-6" key={route}>
+                <Link href={route}>
+                  <a>{label}</a>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </header>
 
       <main className="flex-1 w-full max-w-2xl p-3 mx-auto md:p-6">

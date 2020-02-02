@@ -23,6 +23,9 @@
   },
   "homepage": "https://github.com/taylorbryant/bryant.io#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "1.2.26",
+    "@fortawesome/free-brands-svg-icons": "5.12.0",
+    "@fortawesome/react-fontawesome": "0.1.8",
     "@mapbox/rehype-prism": "0.4.0",
     "@mdx-js/loader": "1.5.5",
     "@next/mdx": "9.2.1",

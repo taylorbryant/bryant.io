@@ -73,17 +73,17 @@ function PostPageLayout(props) {
         />
       </Head>
 
-      <div className="flex-col">
-        <p className="mb-3 text-sm tracking-widest uppercase">
+      <article className="flex-col">
+        <time className="block mb-3 text-sm tracking-widest uppercase">
           {format(parseISO(props.meta.date), `MMMM d, yyyy`)}
-        </p>
+        </time>
 
         <h1 className="mb-6 text-2xl font-bold leading-tight">
           {props.meta.title}
         </h1>
 
         <div className="markdown-body">{props.children}</div>
-      </div>
+      </article>
     </PageLayout>
   );
 }
