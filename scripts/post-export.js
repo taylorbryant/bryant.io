@@ -3,12 +3,12 @@ const fs = require(`fs-extra`);
 const getPathsObject = require(`./get-paths-object`);
 const { format } = require(`date-fns`);
 
-const robots = `User-agent: *
-Sitemap: https://bryant.io/sitemap.xml
-Disallow:`;
+// const robots = `User-agent: *
+// Sitemap: https://bryant.io/sitemap.xml
+// Disallow:`;
 
-fs.writeFileSync(`out/robots.txt`, robots);
-console.log(`robots.txt saved!`);
+// fs.writeFileSync(`out/robots.txt`, robots);
+// console.log(`robots.txt saved!`);
 
 const pathsObj = getPathsObject();
 const today = format(new Date(), `yyyy-MM-dd`);
