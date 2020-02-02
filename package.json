@@ -10,7 +10,8 @@
     "fix:import-sort": "import-sort --write '**/*.js'",
     "fix:lint": "eslint --ext .jsx --ext .js . --fix",
     "fix:prettier": "prettier --write '**/*.{js,css,md,mdx}'",
-    "fix": "npm run fix:lint && npm run fix:prettier && npm run fix:import-sort"
+    "fix": "npm run fix:lint && npm run fix:prettier && npm run fix:import-sort",
+    "post-export": "node scripts/post-export.js"
   },
   "repository": {
     "type": "git",
