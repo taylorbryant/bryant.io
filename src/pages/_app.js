@@ -7,7 +7,7 @@ import React from "react";
 import ReactGA from "react-ga";
 
 const SEO_TITLE = `Taylor Bryant - Software Engineer`;
-const SEO_DESCRIPTION = `Taylor Bryant is a software engineer living in Memphis, TN. He builds software products using React, Next.js, and GraphQL.`;
+const SEO_DESCRIPTION = `Hi, my name is Taylor Bryant. I am a software engineer from Memphis, TN. I build software products using React, Next.js, and GraphQL at a company called Livestock Nutrition Center. In my spare time, I write music, build side projects and write about what I've learned working on an engineering team.`;
 
 Router.events.on(`routeChangeComplete`, url => ReactGA.pageview(url));
 
