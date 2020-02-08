@@ -22,7 +22,7 @@ First, I tried limiting myself to only using `margin-bottom`.
   frameBorder="no"
   allowtransparency="true"
   allowFullScreen={true}
-  className="w-full mb-4 outline-none"
+  className="w-full mb-6 outline-none"
 />
 
 While this doesn't look awful, it introduces a couple of issues:
@@ -41,7 +41,7 @@ Second, I tried modifying my code to account for any edge cases using `:first-ch
   frameBorder="no"
   allowtransparency="true"
   allowFullScreen={true}
-  className="w-full mb-4 outline-none"
+  className="w-full mb-6 outline-none"
 />
 
 This solves the issues introduced with the last approach. However, I can't help but get code smells, because:
@@ -60,7 +60,7 @@ By combining the `:not` selector with `:first-child` and `:last-child`, I was ab
   frameBorder="no"
   allowtransparency="true"
   allowFullScreen={true}
-  className="w-full mb-4 outline-none"
+  className="w-full mb-6 outline-none"
 />
 
 ## Takeaway
