@@ -15,7 +15,7 @@ function ProjectsPage() {
           },
           {
             name: `next-plugin-profiler`,
-            description: `Next.js + React Profiler`,
+            description: `Enable the React Profiler during a production build in your Next.js project`,
             url: `https://github.com/taylorbryant/next-plugin-profiler`
           },
           {
