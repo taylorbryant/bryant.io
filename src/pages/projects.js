@@ -9,17 +9,22 @@ function ProjectsPage() {
         <h1 className="mb-3 text-2xl font-bold">Live</h1>
         {[
           {
-            name: `Next Starter Tailwind`,
+            name: `next-starter-tailwind`,
             description: `A Next.js starter styled using Tailwind CSS`,
             url: `https://github.com/taylorbryant/next-starter-tailwind`
           },
           {
-            name: `Jekyll Starter Tailwind`,
+            name: `next-plugin-profiler`,
+            description: `Next.js + React Profiler`,
+            url: `https://github.com/taylorbryant/next-plugin-profiler`
+          },
+          {
+            name: `jekyll-starter-tailwind`,
             description: `A Jekyll starter styled using Tailwind CSS`,
             url: `https://github.com/taylorbryant/jekyll-starter-tailwind`
           },
           {
-            name: `Gatsby Starter Tailwind`,
+            name: `gatsby-starter-tailwind`,
             description: `A Gatsby starter styled using Tailwind CSS`,
             url: `https://github.com/taylorbryant/gatsby-starter-tailwind`
           },
