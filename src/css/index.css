@@ -1,4 +1,6 @@
 @import "tailwind.css";
+/* purgecss start ignore */
 @import "markdown.css";
 @import "prism.css";
 @import "custom.css";
+/* purgecss end ignore */

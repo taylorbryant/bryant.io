@@ -1,4 +1,3 @@
-/* purgecss start ignore */
 .markdown-body {
   @apply text-lg;
   @apply leading-relaxed;
@@ -61,4 +60,3 @@ ol {
 .markdown-body pre {
   @apply mb-6;
 }
-/* purgecss end ignore */

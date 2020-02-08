@@ -1,11 +1,3 @@
-/* purgecss start ignore */
-/**
- * Tailwind CSS theme for `prism.js`
- * Based on the syntax theme used in the Tailwind CSS docs, which is based  on Atom's
- * `atom-dark` theme: https://github.com/atom/atom-dark-syntax
- * @author Taylor Bryant
- */
-
 code[class*="language-"],
 pre[class*="language-"] {
   @apply font-mono;
@@ -136,4 +128,3 @@ pre.language-bash .token.function {
 .token.entity {
   cursor: help;
 }
-/* purgecss end-ignore */

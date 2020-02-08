@@ -1,8 +1,6 @@
-/* purgecss start ignore */
 a {
   @apply font-bold;
   @apply underline;
   text-decoration-thickness: 0.125em;
   text-underline-offset: 1.5px;
 }
-/* purgecss end ignore */

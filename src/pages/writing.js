@@ -11,7 +11,7 @@ function WritingPage() {
       {posts.map(post => (
         <article className="mb-6" key={post.title}>
           <h1 className="mb-3 text-xl">
-            <Link href={post.path}>
+            <Link href={post.route}>
               <a>{post.title}</a>
             </Link>
           </h1>
