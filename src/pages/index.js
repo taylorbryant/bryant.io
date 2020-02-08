@@ -60,16 +60,29 @@ function HomePage() {
 
         <ul className="flex">
           {[
-            { url: `https://github.com/taylorbryant`, icon: faGithub },
-            { url: `https://twitter.com/tayl_rbryant`, icon: faTwitter },
+            {
+              url: `https://github.com/taylorbryant`,
+              icon: faGithub,
+              title: `GitHub Profile`
+            },
+            {
+              url: `https://twitter.com/tayl_rbryant`,
+              icon: faTwitter,
+              title: `Twitter Profile`
+            },
             {
               url: `https://www.linkedin.com/in/taylorjamesbryant/`,
-              icon: faLinkedinIn
+              icon: faLinkedinIn,
+              title: `LinkedIn Profile`
             }
           ].map(item => (
             <li className="mr-9" key={item.url}>
               <a href={item.url} rel="noopener noreferrer" target="_blank">
-                <FontAwesomeIcon className="w-8 h-8" icon={item.icon} />
+                <FontAwesomeIcon
+                  className="w-8 h-8"
+                  icon={item.icon}
+                  title={item.title}
+                />
               </a>
             </li>
           ))}
