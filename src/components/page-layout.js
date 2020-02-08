@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import React from "react";
 
 const TOP_LEVEL_ROUTES = [
-  { route: `/`, label: `Home` },
   { route: `/writing`, label: `Writing` },
   { route: `/projects`, label: `Projects` }
 ];
