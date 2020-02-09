@@ -73,7 +73,7 @@ function PostPageLayout(props) {
         />
       </Head>
 
-      <article className="flex-col">
+      <article className="flex-col py-9 md:py-16">
         <time className="block mb-3 text-sm tracking-widest uppercase">
           {format(parseISO(props.meta.date), `MMMM d, yyyy`)}
         </time>
