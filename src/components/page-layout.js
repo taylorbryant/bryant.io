@@ -10,19 +10,20 @@ const TOP_LEVEL_ROUTES = [
 function PageLayout({ children }) {
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="flex flex-col w-full max-w-2xl p-3 mx-auto md:p-6 md:items-center md:justify-between md:flex-row">
+      <header className="flex flex-row items-center justify-between w-full max-w-2xl p-3 mx-auto md:p-6">
         <h1>
           <Link href="/">
-            <a className="text-2xl no-underline md:px-2 md:py-1 md:bg-primary">
+            <a className="px-2 py-1 text-2xl no-underline bg-primary">
               bryant.io
             </a>
           </Link>
         </h1>
-        <nav className="mt-3 md:mt-0">
+
+        <nav>
           <h1 className="sr-only">Main navigation</h1>
-          <ul className="flex ">
+          <ul className="flex">
             {TOP_LEVEL_ROUTES.map(({ route, label }) => (
-              <li className="mr-6 md:mr-0 md:ml-6" key={route}>
+              <li className="mr-3 md:mr-0 md:ml-6" key={route}>
                 <Link href={route}>
                   <a>{label}</a>
                 </Link>
