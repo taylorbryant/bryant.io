@@ -8,6 +8,11 @@ const PROJECTS = {
       name: `next-plugin-profiler`,
       description: `Enable the React Profiler during a production build in your Next.js project`,
       url: `https://github.com/taylorbryant/next-plugin-profiler`
+    },
+    {
+      name: `next-plugin-netlify-redirects`,
+      description: `Create a Netlify _redirects file that's compatible with dynamic routes during a production build in your Next.js project`,
+      url: `https://github.com/taylorbryant/next-plugin-netlify-redirects`
     }
   ],
   Starters: [
