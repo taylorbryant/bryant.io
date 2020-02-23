@@ -6,6 +6,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import React from "react";
+import SVG from "react-inlinesvg";
 
 // eslint-disable-next-line import/default
 import posts from "../lib/posts";
@@ -16,11 +17,6 @@ const PROJECTS = {
       name: `next-plugin-profiler`,
       description: `Enable the React Profiler during a production build in your Next.js project`,
       url: `https://github.com/taylorbryant/next-plugin-profiler`
-    },
-    {
-      name: `next-plugin-netlify-redirects`,
-      description: `Create a Netlify _redirects file that's compatible with dynamic routes during a production build in your Next.js project`,
-      url: `https://github.com/taylorbryant/next-plugin-netlify-redirects`
     }
   ],
   Starters: [
@@ -61,7 +57,9 @@ function HomePage() {
     <PageLayout>
       <div>
         <div className="flex flex-col justify-center">
-          <section className="py-9 md:py-16">
+          <section className="pb-9 md:pb-16">
+            <SVG className="w-full" src="images/svg/hi.svg" />
+
             <h1 className="mb-3 text-2xl font-bold md:text-4xl">
               Hi, my name is Taylor Bryant.
             </h1>
@@ -156,7 +154,7 @@ function HomePage() {
           </div>
         </section>
 
-        <section className="flex flex-col md:justify-between md:flex-row pb-9 md:pb-16 ">
+        <section className="flex flex-col md:justify-between md:flex-row pb-9 md:pb-16">
           <div className="md:w-1/3">
             <h1 className="mb-6 text-3xl font-bold md:mb-0" id="writing">
               Writing
