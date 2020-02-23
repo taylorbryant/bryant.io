@@ -58,7 +58,7 @@ function HomePage() {
       <div>
         <div className="flex flex-col justify-center">
           <section className="pb-9 md:pb-16">
-            <SVG className="w-full" src="images/svg/hi.svg" />
+            <SVG className="w-full" src="images/svg/welcome.svg" />
 
             <h1 className="mb-3 text-2xl font-bold md:text-4xl">
               Hi, my name is Taylor Bryant.
