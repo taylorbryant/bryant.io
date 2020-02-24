@@ -27,7 +27,7 @@
     "@fortawesome/free-brands-svg-icons": "5.12.1",
     "@fortawesome/react-fontawesome": "0.1.8",
     "@mapbox/rehype-prism": "0.4.0",
-    "@mdx-js/loader": "1.5.6",
+    "@mdx-js/loader": "1.5.7",
     "@next/mdx": "9.2.2",
     "date-fns": "2.9.0",
     "dotenv": "8.2.0",
