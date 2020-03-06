@@ -25,7 +25,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.27",
     "@fortawesome/free-brands-svg-icons": "5.12.1",
-    "@fortawesome/react-fontawesome": "0.1.8",
+    "@fortawesome/react-fontawesome": "0.1.9",
     "@mapbox/rehype-prism": "0.4.0",
     "@mdx-js/loader": "1.5.7",
     "@next/mdx": "9.2.2",
