@@ -58,7 +58,7 @@ function HomePage() {
         <div className="flex flex-col justify-center">
           <section className="max-w-2xl px-3 mx-auto pb-9 md:pb-16 md:px-6">
             <h1 className="mb-3 text-2xl font-bold md:text-4xl">
-              Hi, my name is Taylor Bryant.
+              Hi, my name is Taylor Bryant. <span aria-hidden="true">👋</span>
             </h1>
 
             <p className="mb-6 text-xl leading-relaxed md:mb-9">
@@ -129,7 +129,6 @@ function HomePage() {
             </div>
 
             <div className="md:w-2/3">
-              {` `}
               {Object.entries(PROJECTS).map(([type, projects]) => (
                 <section key={type}>
                   <h1 className="mb-3 text-2xl font-bold">{type}</h1>
