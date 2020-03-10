@@ -35,8 +35,7 @@
     "prop-types": "15.7.2",
     "react": "16.13.0",
     "react-dom": "16.13.0",
-    "react-ga": "2.7.0",
-    "react-inlinesvg": "1.2.0"
+    "react-ga": "2.7.0"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "2.1.0",
