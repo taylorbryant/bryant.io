@@ -17,10 +17,19 @@ function PageLayout({ children }) {
 
       <footer className="w-full max-w-2xl px-3 mx-auto text-sm py-9 md:px-6 md:py-8">
         Built using{` `}
-        <a href="">Next.js</a>
+        <a href="https://nextjs.org" rel="noopener noreferrer" target="_blank">
+          Next.js
+        </a>
         {` `}
         and{` `}
-        <a href="">Tailwind CSS</a>.
+        <a
+          href="https://tailwindcss.com"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Tailwind CSS
+        </a>
+        .
       </footer>
     </div>
   );
