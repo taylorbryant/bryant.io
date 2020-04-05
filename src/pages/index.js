@@ -1,12 +1,13 @@
 import {
   faGithub,
   faLinkedinIn,
-  faTwitter
+  faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import React from "react";
 
+import PageLayout from "../components/page-layout";
 // eslint-disable-next-line import/default
 import posts from "../lib/posts";
 
@@ -15,41 +16,39 @@ const PROJECTS = {
     {
       name: `next-plugin-profiler`,
       description: `Enable the React Profiler during a production build in your Next.js project`,
-      url: `https://github.com/taylorbryant/next-plugin-profiler`
-    }
+      url: `https://github.com/taylorbryant/next-plugin-profiler`,
+    },
   ],
   Starters: [
     {
       name: `next-starter-tailwind`,
       description: `A Next.js starter styled using Tailwind CSS`,
-      url: `https://github.com/taylorbryant/next-starter-tailwind`
+      url: `https://github.com/taylorbryant/next-starter-tailwind`,
     },
     {
       name: `jekyll-starter-tailwind`,
       description: `A Jekyll starter styled using Tailwind CSS`,
-      url: `https://github.com/taylorbryant/jekyll-starter-tailwind`
+      url: `https://github.com/taylorbryant/jekyll-starter-tailwind`,
     },
     {
       name: `gatsby-starter-tailwind`,
       description: `A Gatsby starter styled using Tailwind CSS`,
-      url: `https://github.com/taylorbryant/gatsby-starter-tailwind`
-    }
+      url: `https://github.com/taylorbryant/gatsby-starter-tailwind`,
+    },
   ],
   Miscellaneous: [
     {
       name: `bookmarklets.io`,
       description: `A list of potentially useful bookmarklets`,
-      url: `https://bookmarklets.io`
+      url: `https://bookmarklets.io`,
     },
     {
       name: `front-end.tools`,
       description: `A collection of tools and resources for front-end developers`,
-      url: `https://front-end.tools`
-    }
-  ]
+      url: `https://front-end.tools`,
+    },
+  ],
 };
-
-import PageLayout from "../components/page-layout";
 
 function HomePage() {
   return (
@@ -93,19 +92,19 @@ function HomePage() {
                 {
                   url: `https://github.com/taylorbryant`,
                   icon: faGithub,
-                  title: `GitHub Profile`
+                  title: `GitHub Profile`,
                 },
                 {
                   url: `https://twitter.com/tayl_rbryant`,
                   icon: faTwitter,
-                  title: `Twitter Profile`
+                  title: `Twitter Profile`,
                 },
                 {
                   url: `https://www.linkedin.com/in/taylorjamesbryant/`,
                   icon: faLinkedinIn,
-                  title: `LinkedIn Profile`
-                }
-              ].map(item => (
+                  title: `LinkedIn Profile`,
+                },
+              ].map((item) => (
                 <li className="mr-9" key={item.url}>
                   <a href={item.url} rel="noopener noreferrer" target="_blank">
                     <FontAwesomeIcon
@@ -132,7 +131,7 @@ function HomePage() {
               {Object.entries(PROJECTS).map(([type, projects]) => (
                 <section key={type}>
                   <h1 className="mb-3 text-2xl font-bold">{type}</h1>
-                  {projects.map(project => (
+                  {projects.map((project) => (
                     <article className="mb-6" key={project.name}>
                       <h1 className="mb-3 text-xl">
                         <a
@@ -161,7 +160,7 @@ function HomePage() {
             </div>
 
             <div className="md:w-2/3">
-              {posts.map(post => (
+              {posts.map((post) => (
                 <article className="mb-6" key={post.title}>
                   <h1 className="mb-3 text-xl">
                     <Link href={post.route}>

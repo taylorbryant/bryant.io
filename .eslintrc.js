@@ -1,13 +1,13 @@
 module.exports = {
   env: {
     browser: true,
-    es6: true
+    es6: true,
   },
   extends: [
     "eslint:recommended",
     "plugin:import/recommended",
     "plugin:jsx-a11y/recommended",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
   ],
   parser: "babel-eslint",
   plugins: ["import", "prettier", "jsx-a11y", "react", "react-hooks"],
@@ -21,11 +21,11 @@ module.exports = {
     "react/jsx-sort-props": ["error"],
     "react/jsx-sort-props": ["error"],
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn"
+    "react-hooks/exhaustive-deps": "warn",
   },
   settings: {
     react: {
-      version: "detect"
-    }
-  }
+      version: "detect",
+    },
+  },
 };

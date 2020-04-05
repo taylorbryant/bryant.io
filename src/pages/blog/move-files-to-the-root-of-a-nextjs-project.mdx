@@ -4,7 +4,7 @@ export const meta = {
   isPublished: true,
   date: `2019-09-02`,
   title: `Move files to the root of a Next.js project`,
-  summary: `Need to place a file like sitemap.xml in the root of your Next.js project? Here's one way to do it.`
+  summary: `Need to place a file like sitemap.xml in the root of your Next.js project? Here's one way to do it.`,
 };
 
 export default PostPageLayout;
@@ -23,10 +23,10 @@ Create a file called `move-files-to-root-directory.js` in the root of your proje
 const fs = require(`fs`).promises;
 
 Promise.all(
-  [`_redirects`, `sitemap.xml`].map(fileName =>
+  [`_redirects`, `sitemap.xml`].map((fileName) =>
     fs.copyFile(`./${fileName}`, `./out/${fileName}`).then(() => fileName)
   )
-).then(fileNames =>
+).then((fileNames) =>
   console.log(
     `The following files were copied to './out': ${JSON.stringify(fileNames)}`
   )

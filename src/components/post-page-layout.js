@@ -90,7 +90,7 @@ function PostPageLayout(props) {
 
 PostPageLayout.propTypes = {
   children: PropTypes.node.isRequired,
-  meta: PropTypes.object.isRequired
+  meta: PropTypes.object.isRequired,
 };
 
 export default PostPageLayout;

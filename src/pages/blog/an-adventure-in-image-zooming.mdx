@@ -4,7 +4,7 @@ export const meta = {
   isPublished: false,
   date: `2017-10-09`,
   title: `An adventure in image zooming`,
-  summary: `Learn how to use Zoom.js`
+  summary: `Learn how to use Zoom.js`,
 };
 
 export default PostPageLayout;
@@ -71,7 +71,7 @@ img.zoom-img {
 Add the following JavaScript snippet right before the `</body>` tag in your HTML document.
 
 ```javascript
-+(function() {
++(function () {
   "use strict";
   function e(e) {
     var t = e.getBoundingClientRect(),
@@ -89,7 +89,7 @@ Add the following JavaScript snippet right before the `</body>` tag in your HTML
   }
   function t() {
     function e() {
-      document.body.addEventListener("click", function(e) {
+      document.body.addEventListener("click", function (e) {
         "zoom" === e.target.getAttribute("data-action") &&
           "IMG" === e.target.tagName &&
           t(e);
@@ -157,10 +157,10 @@ Add the following JavaScript snippet right before the `</body>` tag in your HTML
     return { listen: e };
   }
   var n = 80,
-    o = (function() {
+    o = (function () {
       function t() {
         var e = document.createElement("img");
-        (e.onload = function() {
+        (e.onload = function () {
           (d = Number(e.height)), (l = Number(e.width)), o();
         }),
           (e.src = m.currentSrc || m.src);
@@ -252,7 +252,7 @@ Add the following JavaScript snippet right before the `</body>` tag in your HTML
         m = null,
         f = null,
         v = null;
-      return function(e) {
+      return function (e) {
         return (m = e), { zoomImage: t, close: s, dispose: a };
       };
     })();
