@@ -55,7 +55,7 @@ function HomePage() {
     <PageLayout>
       <div>
         <div className="flex flex-col justify-center">
-          <section className="max-w-2xl px-3 mx-auto pb-9 md:pb-16 md:px-6">
+          <section className="max-w-2xl mx-auto pb-9 md:pb-16 px-6">
             <h1 className="mb-3 text-2xl font-bold md:text-4xl">
               Hi, my name is Taylor Bryant. <span aria-hidden="true">👋</span>
             </h1>
@@ -119,60 +119,56 @@ function HomePage() {
           </section>
         </div>
 
-        <div className="text-white bg-blue-600">
-          <section className="flex flex-col max-w-2xl px-3 mx-auto py-9 md:py-16 md:justify-between md:flex-row md:px-6">
-            <div className="md:w-1/3">
-              <h1 className="mb-6 text-3xl font-bold md:mb-0" id="projects">
-                Projects
-              </h1>
-            </div>
+        <section className="flex flex-col max-w-2xl px-6 mx-auto py-9 md:py-16 md:justify-between md:flex-row">
+          <div className="md:w-1/3">
+            <h1 className="mb-6 text-3xl font-bold md:mb-0" id="projects">
+              Projects
+            </h1>
+          </div>
 
-            <div className="md:w-2/3">
-              {Object.entries(PROJECTS).map(([type, projects]) => (
-                <section key={type}>
-                  <h1 className="mb-3 text-2xl font-bold">{type}</h1>
-                  {projects.map((project) => (
-                    <article className="mb-6" key={project.name}>
-                      <h1 className="mb-3 text-xl">
-                        <a
-                          href={project.url}
-                          rel="noopener noreferrer"
-                          target="_blank"
-                        >
-                          {project.name}
-                        </a>
-                      </h1>
-                      <p className="leading-relaxed">{project.description}</p>
-                    </article>
-                  ))}
-                </section>
-              ))}
-            </div>
-          </section>
-        </div>
+          <div className="md:w-2/3">
+            {Object.entries(PROJECTS).map(([type, projects]) => (
+              <section key={type}>
+                <h1 className="mb-3 text-2xl font-bold">{type}</h1>
+                {projects.map((project) => (
+                  <article className="mb-6" key={project.name}>
+                    <h1 className="mb-3 text-xl">
+                      <a
+                        href={project.url}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        {project.name}
+                      </a>
+                    </h1>
+                    <p className="leading-relaxed">{project.description}</p>
+                  </article>
+                ))}
+              </section>
+            ))}
+          </div>
+        </section>
 
-        <div className="text-white bg-blue-700">
-          <section className="flex flex-col max-w-2xl px-3 mx-auto md:justify-between md:flex-row py-9 md:py-16 md:px-6">
-            <div className="md:w-1/3">
-              <h1 className="mb-6 text-3xl font-bold md:mb-0" id="writing">
-                Writing
-              </h1>
-            </div>
+        <section className="flex flex-col max-w-2xl px-6 mx-auto md:justify-between md:flex-row py-9 md:py-16">
+          <div className="md:w-1/3">
+            <h1 className="mb-6 text-3xl font-bold md:mb-0" id="writing">
+              Writing
+            </h1>
+          </div>
 
-            <div className="md:w-2/3">
-              {posts.map((post) => (
-                <article className="mb-6" key={post.title}>
-                  <h1 className="mb-3 text-xl">
-                    <Link href={post.route}>
-                      <a>{post.title}</a>
-                    </Link>
-                  </h1>
-                  <p className="leading-relaxed">{post.summary}</p>
-                </article>
-              ))}
-            </div>
-          </section>
-        </div>
+          <div className="md:w-2/3">
+            {posts.map((post) => (
+              <article className="mb-6" key={post.title}>
+                <h1 className="mb-3 text-xl">
+                  <Link href={post.route}>
+                    <a>{post.title}</a>
+                  </Link>
+                </h1>
+                <p className="leading-relaxed">{post.summary}</p>
+              </article>
+            ))}
+          </div>
+        </section>
       </div>
     </PageLayout>
   );

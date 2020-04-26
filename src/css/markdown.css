@@ -1,5 +1,4 @@
 .markdown-body {
-  @apply text-lg;
   @apply leading-relaxed;
 }
 
