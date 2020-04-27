@@ -87,7 +87,7 @@ function HomePage() {
               working on an engineering team.
             </p>
 
-            <ul className="flex">
+            <ul className="flex space-x-8">
               {[
                 {
                   url: `https://github.com/taylorbryant`,
@@ -105,7 +105,7 @@ function HomePage() {
                   title: `LinkedIn Profile`,
                 },
               ].map((item) => (
-                <li className="mr-9" key={item.url}>
+                <li key={item.url}>
                   <a href={item.url} rel="noopener noreferrer" target="_blank">
                     <FontAwesomeIcon
                       className="w-8 h-8"
@@ -126,24 +126,27 @@ function HomePage() {
             </h1>
           </div>
 
-          <div className="md:w-2/3">
+          <div className="md:w-2/3 space-y-6">
             {Object.entries(PROJECTS).map(([type, projects]) => (
               <section key={type}>
                 <h1 className="mb-3 text-2xl font-bold">{type}</h1>
-                {projects.map((project) => (
-                  <article className="mb-6" key={project.name}>
-                    <h1 className="mb-3 text-xl">
-                      <a
-                        href={project.url}
-                        rel="noopener noreferrer"
-                        target="_blank"
-                      >
-                        {project.name}
-                      </a>
-                    </h1>
-                    <p className="leading-relaxed">{project.description}</p>
-                  </article>
-                ))}
+
+                <div className="space-y-6">
+                  {projects.map((project) => (
+                    <article key={project.name}>
+                      <h1 className="mb-3 text-xl">
+                        <a
+                          href={project.url}
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          {project.name}
+                        </a>
+                      </h1>
+                      <p className="leading-relaxed">{project.description}</p>
+                    </article>
+                  ))}
+                </div>
               </section>
             ))}
           </div>
@@ -156,9 +159,9 @@ function HomePage() {
             </h1>
           </div>
 
-          <div className="md:w-2/3">
+          <div className="md:w-2/3 space-y-6">
             {posts.map((post) => (
-              <article className="mb-6" key={post.title}>
+              <article key={post.title}>
                 <h1 className="mb-3 text-xl">
                   <Link href={post.route}>
                     <a>{post.title}</a>
