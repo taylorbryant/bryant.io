@@ -60,7 +60,7 @@ function HomePage() {
               Hi, my name is Taylor Bryant. <span aria-hidden="true">👋</span>
             </h1>
 
-            <p className="mb-6 text-xl leading-relaxed md:mb-9">
+            <p className="mb-6 text-lg md:text-xl leading-relaxed md:mb-9">
               I am a software engineer from Memphis, TN. I build software
               products using React, Next.js, and GraphQL at a company called
               {` `}
