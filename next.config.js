@@ -1,5 +1,5 @@
-/*eslint-env node*/
 require(`dotenv`).config();
+
 const rehypePrism = require(`@mapbox/rehype-prism`);
 const withMDX = require(`@next/mdx`)({
   extension: /\.mdx?$/,

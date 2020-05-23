@@ -1,4 +1,3 @@
-/* eslint-env node */
 const defaultTheme = require(`tailwindcss/defaultTheme`);
 
 module.exports = {
