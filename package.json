@@ -7,10 +7,11 @@
     "build": "next build",
     "export": "npm run build && next export",
     "start": "next start",
+    "fix:dependencies": "npm audit fix",
     "fix:import-sort": "import-sort --write '**/*.js'",
     "fix:lint": "eslint --ext .jsx --ext .js . --fix",
     "fix:prettier": "prettier --write '**/*.{js,css,md,mdx}'",
-    "fix": "npm run fix:lint && npm run fix:prettier && npm run fix:import-sort"
+    "fix": "npm run fix:dependencies && npm run fix:lint && npm run fix:prettier && npm run fix:import-sort"
   },
   "repository": {
     "type": "git",
