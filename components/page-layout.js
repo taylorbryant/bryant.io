@@ -8,7 +8,7 @@ function PageLayout({ children }) {
       <header className="w-full max-w-2xl pt-6 mx-auto px-6 pb-9 md:pb-16">
         <h1>
           <Link href="/">
-            <a className="text-2xl no-underline">bryant.io</a>
+            <a className="text-xl md:text-2xl no-underline">bryant.io</a>
           </Link>
         </h1>
       </header>
