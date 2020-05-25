@@ -56,11 +56,11 @@ function HomePage() {
       <div>
         <div className="flex flex-col justify-center">
           <section className="max-w-2xl mx-auto pb-9 md:pb-16 px-6">
-            <h1 className="mb-3 text-2xl font-bold md:text-4xl">
+            <h1 className="mb-3 text-lg font-bold md:text-4xl">
               Hi, my name is Taylor Bryant. <span aria-hidden="true">👋</span>
             </h1>
 
-            <p className="mb-6 text-lg md:text-xl leading-relaxed md:mb-9">
+            <p className="mb-6 md:text-xl leading-relaxed md:mb-9">
               I am a software engineer from Memphis, TN. I build software
               products using React, Next.js, and GraphQL at a company called
               {` `}
@@ -121,7 +121,7 @@ function HomePage() {
 
         <section className="flex flex-col max-w-2xl px-6 mx-auto py-9 md:py-16 md:justify-between md:flex-row">
           <div className="md:w-1/3">
-            <h1 className="mb-6 text-3xl font-bold md:mb-0" id="projects">
+            <h1 className="mb-6 text-xl md:text-3xl font-bold md:mb-0" id="projects">
               Projects
             </h1>
           </div>
@@ -134,7 +134,7 @@ function HomePage() {
                 <div className="space-y-6">
                   {projects.map((project) => (
                     <article key={project.name}>
-                      <h1 className="mb-3 text-xl">
+                      <h1 className="mb-3 md:text-xl">
                         <a
                           href={project.url}
                           rel="noopener noreferrer"
@@ -154,7 +154,7 @@ function HomePage() {
 
         <section className="flex flex-col max-w-2xl px-6 mx-auto md:justify-between md:flex-row py-9 md:py-16">
           <div className="md:w-1/3">
-            <h1 className="mb-6 text-3xl font-bold md:mb-0" id="writing">
+            <h1 className="mb-6 text-xl md:text-3xl font-bold md:mb-0" id="writing">
               Writing
             </h1>
           </div>
@@ -162,7 +162,7 @@ function HomePage() {
           <div className="md:w-2/3 space-y-6">
             {posts.map((post) => (
               <article key={post.title}>
-                <h1 className="mb-3 text-xl">
+                <h1 className="mb-3 md:text-xl">
                   <Link href={post.route}>
                     <a>{post.title}</a>
                   </Link>
