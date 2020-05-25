@@ -129,7 +129,7 @@ function HomePage() {
           <div className="md:w-2/3 space-y-6">
             {Object.entries(PROJECTS).map(([type, projects]) => (
               <section key={type}>
-                <h1 className="mb-3 text-2xl font-bold">{type}</h1>
+                <h1 className="mb-3 text-lg md:text-2xl font-bold">{type}</h1>
 
                 <div className="space-y-6">
                   {projects.map((project) => (
