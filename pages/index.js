@@ -47,6 +47,21 @@ const PROJECTS = {
       description: `A collection of tools and resources for front-end developers`,
       url: `https://front-end.tools`,
     },
+   {
+      name: `Magnolia Homes`,
+      description: `Built during my time at HigherVisibility. Won a 2018 Web Award.`,
+      url: `https://yourmagnoliahome.com`,
+    },
+    {
+      name: `East Coast Wings Franchise`,
+      description: `Built during my time at HigherVisibility`,
+      url: `https://eastcoastwingsfranchise.com`,
+    },
+    {
+      name: `GrrlPunch`,
+      description: `Coded a design provided by the team at GrrlPunch`,
+      url: `https://grrlpunch.com`,
+    },
   ],
 };
 
