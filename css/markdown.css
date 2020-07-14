@@ -12,7 +12,7 @@
   @apply tracking-tight;
   @apply font-bold;
   @apply mb-3;
-  @apply mt-9;
+  @apply mt-12;
 }
 
 .markdown-body h2 {
@@ -30,11 +30,11 @@ ol {
 }
 
 .markdown-body li:not(:first-child) {
-  @apply mt-4;
+  @apply mt-3;
 }
 
 .markdown-body li {
-  @apply mb-4;
+  @apply mb-3;
 }
 
 .markdown-body img {
@@ -48,7 +48,7 @@ ol {
 
 .markdown-body :not(pre) code {
   font-size: 0.8em;
-  @apply bg-teal-200;
+  @apply bg-gray-300;
   @apply px-2;
   @apply py-1;
   @apply whitespace-pre-wrap;
