@@ -11,73 +11,62 @@ import PageLayout from "../components/page-layout";
 // eslint-disable-next-line import/default
 import posts from "../lib/posts";
 
-const PROJECTS = {
-  Packages: [
-    {
-      name: `next-plugin-profiler`,
-      description: `Enable the React Profiler during a production build in your Next.js project`,
-      url: `https://github.com/taylorbryant/next-plugin-profiler`,
-    },
-  ],
-  Starters: [
-    {
-      name: `next-starter-tailwind`,
-      description: `A Next.js starter styled using Tailwind CSS`,
-      url: `https://github.com/taylorbryant/next-starter-tailwind`,
-    },
-    {
-      name: `jekyll-starter-tailwind`,
-      description: `A Jekyll starter styled using Tailwind CSS`,
-      url: `https://github.com/taylorbryant/jekyll-starter-tailwind`,
-    },
-    {
-      name: `gatsby-starter-tailwind`,
-      description: `A Gatsby starter styled using Tailwind CSS`,
-      url: `https://github.com/taylorbryant/gatsby-starter-tailwind`,
-    },
-  ],
-  Miscellaneous: [
-    {
-      name: `bookmarklets.io`,
-      description: `A list of potentially useful bookmarklets`,
-      url: `https://bookmarklets.io`,
-    },
-    {
-      name: `front-end.tools`,
-      description: `A collection of tools and resources for front-end developers`,
-      url: `https://front-end.tools`,
-    },
-  ],
-  "Client work": [
-    {
-      name: `Magnolia Homes`,
-      description: `Built during my time at HigherVisibility. Won a 2018 Web Award.`,
-      url: `https://yourmagnoliahome.com`,
-    },
-    {
-      name: `East Coast Wings Franchise`,
-      description: `Built during my time at HigherVisibility`,
-      url: `https://eastcoastwingsfranchise.com`,
-    },
-    {
-      name: `GrrlPunch`,
-      description: `Coded a design provided by the team at GrrlPunch`,
-      url: `https://grrlpunch.com`,
-    },
-  ],
-};
+const PROJECTS = [
+  {
+    name: `next-plugin-profiler`,
+    description: `Enable the React Profiler during a production build in your Next.js project`,
+    url: `https://github.com/taylorbryant/next-plugin-profiler`,
+    color: `indigo`,
+    tags: [{ name: `JavaScript` }],
+  },
+  {
+    name: `next-starter-tailwind`,
+    description: `A Next.js starter styled using Tailwind CSS`,
+    url: `https://github.com/taylorbryant/next-starter-tailwind`,
+    tags: [{ name: `Next.js` }, { name: `Tailwind CSS` }],
+    color: `orange`,
+  },
+  {
+    name: `jekyll-starter-tailwind`,
+    description: `A Jekyll starter styled using Tailwind CSS`,
+    url: `https://github.com/taylorbryant/jekyll-starter-tailwind`,
+    tags: [{ name: `Jekyll` }, { name: `Tailwind CSS` }],
+    color: `teal`,
+  },
+  {
+    name: `gatsby-starter-tailwind`,
+    description: `A Gatsby starter styled using Tailwind CSS`,
+    url: `https://github.com/taylorbryant/gatsby-starter-tailwind`,
+    tags: [{ name: `Gatsby.js` }, { name: `Tailwind CSS` }],
+    color: `blue`,
+  },
+  {
+    name: `bookmarklets.io`,
+    description: `A list of potentially useful bookmarklets`,
+    url: `https://bookmarklets.io`,
+    tags: [{ name: `Next.js` }, { name: `Tailwind CSS` }],
+    color: `red`,
+  },
+  {
+    name: `front-end.tools`,
+    description: `A collection of tools and resources for front-end developers`,
+    url: `https://front-end.tools`,
+    tags: [{ name: `HTML` }, { name: `CSS` }],
+    color: `purple`,
+  },
+];
 
 function HomePage() {
   return (
     <PageLayout>
       <div>
         <div className="flex flex-col justify-center">
-          <section className="max-w-2xl mx-auto pb-9 md:pb-16 px-6">
-            <h1 className="mb-3 text-lg font-bold md:text-4xl">
+          <section className="max-w-2xl px-6 py-12 mx-auto">
+            <h1 className="mb-3 text-4xl font-bold">
               Hi, my name is Taylor Bryant. <span aria-hidden="true">👋</span>
             </h1>
 
-            <p className="mb-6 md:text-xl leading-relaxed md:mb-9">
+            <p className="text-xl leading-relaxed text-gray-700 mb-9">
               I am a software engineer from Memphis, TN. I build software
               products using React, Next.js, and GraphQL at a company called
               {` `}
@@ -136,61 +125,68 @@ function HomePage() {
           </section>
         </div>
 
-        <section className="flex flex-col max-w-2xl px-6 mx-auto py-9 md:py-16 md:justify-between md:flex-row">
-          <div className="md:w-1/3">
-            <h1
-              className="mb-6 text-xl md:text-3xl font-bold md:mb-0"
-              id="projects"
-            >
-              Projects
-            </h1>
-          </div>
+        <section className="max-w-2xl p-6 mx-auto">
+          <h1 className="mb-6 text-3xl font-bold" id="projects">
+            Projects
+          </h1>
 
-          <div className="md:w-2/3 space-y-6">
-            {Object.entries(PROJECTS).map(([type, projects]) => (
-              <section key={type}>
-                <h1 className="mb-3 text-lg md:text-2xl font-bold">{type}</h1>
+          <div className="space-y-6">
+            {PROJECTS.map((project) => (
+              <a
+                className="block no-underline"
+                href={project.url}
+                key={project.name}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <article className="bg-white rounded-md shadow-md cursor-pointer hover:shadow-lg">
+                  <h1
+                    className={`flex items-center justify-center h-32 text-2xl text-center text-${project.color}-400 bg-${project.color}-100`}
+                  >
+                    {project.name}
+                  </h1>
 
-                <div className="space-y-6">
-                  {projects.map((project) => (
-                    <article key={project.name}>
-                      <h1 className="mb-3 md:text-xl">
-                        <a
-                          href={project.url}
-                          rel="noopener noreferrer"
-                          target="_blank"
+                  <div className="p-6 font-normal">
+                    <p className="mb-6 leading-relaxed text-gray-700">
+                      {project.description}
+                    </p>
+
+                    <ul className="space-x-2">
+                      {project.tags.map((tag) => (
+                        <li
+                          className={`bg-gray-200 text-xs text-gray-600 inline rounded-full px-3 py-1`}
+                          key={tag.name}
                         >
-                          {project.name}
-                        </a>
-                      </h1>
-                      <p className="leading-relaxed">{project.description}</p>
-                    </article>
-                  ))}
-                </div>
-              </section>
+                          {tag.name}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </article>
+              </a>
             ))}
           </div>
         </section>
 
-        <section className="flex flex-col max-w-2xl px-6 mx-auto md:justify-between md:flex-row py-9 md:py-16">
+        <section className="flex flex-col max-w-2xl pt-12 pb-6 pl-6 pr-6 mx-auto md:justify-between md:flex-row">
           <div className="md:w-1/3">
             <h1
-              className="mb-6 text-xl md:text-3xl font-bold md:mb-0"
+              className="mb-6 text-xl text-3xl font-bold md:mb-0"
               id="writing"
             >
               Writing
             </h1>
           </div>
 
-          <div className="md:w-2/3 space-y-6">
+          <div className="space-y-6 md:w-2/3">
             {posts.map((post) => (
               <article key={post.title}>
-                <h1 className="mb-3 md:text-xl">
+                <h1 className="mb-3 text-xl">
                   <Link href={post.route}>
                     <a>{post.title}</a>
                   </Link>
                 </h1>
-                <p className="leading-relaxed">{post.summary}</p>
+                <p className="leading-relaxed text-gray-700">{post.summary}</p>
               </article>
             ))}
           </div>
