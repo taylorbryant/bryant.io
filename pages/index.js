@@ -49,8 +49,7 @@ const PROJECTS = {
     },
   ],
   "Client work": [
-
-   {
+    {
       name: `Magnolia Homes`,
       description: `Built during my time at HigherVisibility. Won a 2018 Web Award.`,
       url: `https://yourmagnoliahome.com`,
@@ -65,7 +64,7 @@ const PROJECTS = {
       description: `Coded a design provided by the team at GrrlPunch`,
       url: `https://grrlpunch.com`,
     },
-  ]
+  ],
 };
 
 function HomePage() {
@@ -139,7 +138,10 @@ function HomePage() {
 
         <section className="flex flex-col max-w-2xl px-6 mx-auto py-9 md:py-16 md:justify-between md:flex-row">
           <div className="md:w-1/3">
-            <h1 className="mb-6 text-xl md:text-3xl font-bold md:mb-0" id="projects">
+            <h1
+              className="mb-6 text-xl md:text-3xl font-bold md:mb-0"
+              id="projects"
+            >
               Projects
             </h1>
           </div>
@@ -172,7 +174,10 @@ function HomePage() {
 
         <section className="flex flex-col max-w-2xl px-6 mx-auto md:justify-between md:flex-row py-9 md:py-16">
           <div className="md:w-1/3">
-            <h1 className="mb-6 text-xl md:text-3xl font-bold md:mb-0" id="writing">
+            <h1
+              className="mb-6 text-xl md:text-3xl font-bold md:mb-0"
+              id="writing"
+            >
               Writing
             </h1>
           </div>
