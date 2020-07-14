@@ -48,7 +48,7 @@ ol {
 
 .markdown-body :not(pre) code {
   font-size: 0.8em;
-  @apply bg-gray-200;
+  @apply bg-teal-200;
   @apply px-2;
   @apply py-1;
   @apply whitespace-pre-wrap;
