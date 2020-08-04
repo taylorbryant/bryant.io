@@ -1,10 +1,11 @@
-import PostPageLayout from "../../components/post-page-layout";
+import PostPageLayout from "../../../components/post-page-layout";
+import exampleGif from "./example.gif";
 
 export const meta = {
-  isPublished: false,
+  isPublished: true,
   date: `2017-10-09`,
   title: `An adventure in image zooming`,
-  summary: `Learn how to use Zoom.js`,
+  description: `Learn how to use Zoom.js`,
 };
 
 export default PostPageLayout;
@@ -17,7 +18,7 @@ Zoom.js is a jQuery plugin built by [@fat](https://github.com/fat), a developer 
 
 You can see Zoom.js in action below.
 
-![Zoom.js Example](/images/blog/an-adventure-in-image-zooming/example.gif)
+<img src={exampleGif} alt="Zoom.js example" />
 
 ## mehQuery
 
