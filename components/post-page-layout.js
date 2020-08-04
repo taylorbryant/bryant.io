@@ -24,7 +24,7 @@ function PostPageLayout(props) {
           key="google-description"
         />
         <meta
-          content="/images/favicon/android-chrome-256x256.png"
+          content="/android-chrome-256x256.png"
           itemProp="image"
           key="google-image"
         />
@@ -46,7 +46,7 @@ function PostPageLayout(props) {
           property="og:description"
         />
         <meta
-          content="/images/favicon/android-chrome-256x256.png"
+          content="/android-chrome-256x256.png"
           key="facebook-image"
           property="og:image"
         />
@@ -67,7 +67,7 @@ function PostPageLayout(props) {
           name="twitter:description"
         />
         <meta
-          content="/images/favicon/android-chrome-256x256.png"
+          content="/android-chrome-256x256.png"
           key="twitter-iamge"
           name="twitter:image"
         />
