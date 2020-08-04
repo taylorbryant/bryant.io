@@ -39,7 +39,7 @@
     "react-ga": "3.1.2"
   },
   "devDependencies": {
-    "autoprefixer": "9.8.5",
+    "autoprefixer": "9.8.6",
     "babel-eslint": "10.1.0",
     "babel-plugin-macros": "2.8.0",
     "babel-plugin-preval": "5.0.0",
