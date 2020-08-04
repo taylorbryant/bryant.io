@@ -8,8 +8,10 @@ import Link from "next/link";
 import React from "react";
 
 import PageLayout from "../components/page-layout";
+import getMetadataForPosts from "../lib/get-metadata-for-posts";
+
 // eslint-disable-next-line import/default
-import posts from "../lib/posts";
+// import posts from "../lib/posts";
 
 const PROJECTS = [
   {
@@ -167,16 +169,18 @@ function HomePage() {
         </div>
 
         <div className="space-y-6 md:w-2/3">
-          {posts.map((post) => (
-            <article key={post.title}>
-              <h1 className="mb-3 text-xl">
-                <Link href={post.route}>
-                  <a>{post.title}</a>
-                </Link>
-              </h1>
-              <p className="leading-relaxed">{post.summary}</p>
-            </article>
-          ))}
+          {getMetadataForPosts()
+            .filter(({ meta }) => meta.isPublished)
+            .map(({ link, meta }) => (
+              <article key={meta.title}>
+                <h1 className="mb-3 text-xl">
+                  <Link href={link}>
+                    <a>{meta.title}</a>
+                  </Link>
+                </h1>
+                <p className="leading-relaxed">{meta.description}</p>
+              </article>
+            ))}
         </div>
       </section>
     </PageLayout>
