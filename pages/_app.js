@@ -38,7 +38,7 @@ class MyApp extends App {
             key="google-description"
           />
           <meta
-            content="/images/favicon/android-chrome-256x256.png"
+            content="/android-chrome-256x256.png"
             itemProp="image"
             key="google-image"
           />
@@ -56,7 +56,7 @@ class MyApp extends App {
             property="og:description"
           />
           <meta
-            content="/images/favicon/android-chrome-256x256.png"
+            content="/android-chrome-256x256.png"
             key="facebook-image"
             property="og:image"
           />
@@ -73,40 +73,33 @@ class MyApp extends App {
             name="twitter:description"
           />
           <meta
-            content="/images/favicon/android-chrome-256x256.png"
+            content="/android-chrome-256x256.png"
             key="twitter-iamge"
             name="twitter:image"
           />
           {/* Favicon */}
           <link
-            href="/images/favicon/apple-touch-icon.png"
+            href="/apple-touch-icon.png"
             rel="apple-touch-icon"
             sizes="180x180"
           />
           <link
-            href="/images/favicon/favicon-32x32.png"
+            href="/favicon-32x32.png"
             rel="icon"
             sizes="32x32"
             type="image/png"
           />
           <link
-            href="/images/favicon/favicon-16x16.png"
+            href="/favicon-16x16.png"
             rel="icon"
             sizes="16x16"
             type="image/png"
           />
-          <link href="/images/favicon/site.webmanifest" rel="manifest" />
-          <link
-            color="#5bbad5"
-            href="/images/favicon/safari-pinned-tab.svg"
-            rel="mask-icon"
-          />
-          <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
+          <link href="/site.webmanifest" rel="manifest" />
+          <link color="#5bbad5" href="/safari-pinned-tab.svg" rel="mask-icon" />
+          <link href="/favicon.ico" rel="shortcut icon" />
           <meta content="#00aba9" name="msapplication-TileColor" />
-          <meta
-            content="/images/favicon/browserconfig.xml"
-            name="msapplication-config"
-          />
+          <meta content="/browserconfig.xml" name="msapplication-config" />
           <meta content="#ffffff" name="theme-color" />
         </Head>
 
