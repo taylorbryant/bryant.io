@@ -51,7 +51,7 @@
     "import-sort-cli": "6.0.0",
     "import-sort-parser-babylon": "6.0.0",
     "import-sort-style-module": "6.0.0",
-    "lint-staged": "10.2.11",
+    "lint-staged": "10.2.13",
     "prettier": "2.1.1",
     "tailwindcss": "1.7.3"
   },
