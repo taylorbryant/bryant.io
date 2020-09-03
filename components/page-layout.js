@@ -9,7 +9,7 @@ function PageLayout({ children }) {
         <h1>
           <Link href="/">
             <a className="px-3 py-1 text-2xl no-underline bg-indigo-500">
-              taylorbryant.dev
+              Taylor Bryant
             </a>
           </Link>
         </h1>
