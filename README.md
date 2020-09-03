@@ -1,4 +1,4 @@
-# bryant.io
+# taylorbryant.dev
 
 Personal website for Taylor Bryant. Built using [Next.js](https://nextjs.org) and [Tailwind CSS](https://tailwindcss.com).
 
