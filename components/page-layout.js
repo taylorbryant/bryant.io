@@ -6,7 +6,7 @@ function PageLayout({ children }) {
   return (
     <div className="flex flex-col min-h-screen space-y-12 text-gray-800 bg-gray-100 md:space-y-24">
       <header className="items-center w-full max-w-2xl px-3 pt-3 md:pt-6 mx-auto md:px-6 flex">
-        <img src="https://www.gravatar.com/avatar/889987f164dfd9c869bb863c40d9cc12" className="rounded-full w-12 h-12" />
+        <img src="https://www.gravatar.com/avatar/889987f164dfd9c869bb863c40d9cc12" className="rounded-full w-10 h-10" />
 <h1>
           <Link href="/">
             <a className="ml-3 text-2xl no-underline">
