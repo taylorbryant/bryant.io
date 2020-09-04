@@ -38,6 +38,7 @@ ol {
 }
 
 .markdown-body img {
+  @apply rounded-md;
   @apply mb-6;
   @apply w-full;
 }

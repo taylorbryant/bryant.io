@@ -56,14 +56,14 @@ function HomePage() {
   return (
     <PageLayout>
       <div className="flex flex-col justify-center">
-        <section className="max-w-2xl px-3 mx-auto md:px-6">
+        <section className="max-w-3xl px-3 mx-auto md:px-6">
           <h1 className="mb-3 text-4xl font-bold">
-            Hi, my name is Taylor Bryant. <span aria-hidden="true">👋</span>
+            Hi, I&apos;m Taylor. <span aria-hidden="true">👋</span>
           </h1>
 
           <p className="mb-12 text-xl leading-relaxed">
-            I am a software engineer from Memphis, TN. I build software products
-            using React, Next.js, and GraphQL at a company called
+            I&apos;m a software engineer from Memphis, TN. I build internal
+            tools using React, Next.js, and GraphQL at a company called
             {` `}
             <a
               href="https://lnc-online.com"
@@ -120,7 +120,7 @@ function HomePage() {
         </section>
       </div>
 
-      <section className="max-w-2xl px-3 mx-auto md:px-6">
+      <section className="max-w-3xl px-3 mx-auto md:px-6">
         <h1 className="mb-6 text-3xl font-bold" id="projects">
           Projects
         </h1>
@@ -161,9 +161,9 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="flex flex-col max-w-2xl px-3 mx-auto md:px-6 md:justify-between md:flex-row">
+      <section className="flex flex-col max-w-3xl px-3 mx-auto md:px-6 md:justify-between md:flex-row">
         <div className="md:w-1/3">
-          <h1 className="mb-6 text-xl text-3xl font-bold md:mb-0" id="writing">
+          <h1 className="mb-6 text-3xl font-bold md:mb-0" id="writing">
             Writing
           </h1>
         </div>
