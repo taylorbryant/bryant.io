@@ -10,9 +10,6 @@ import React from "react";
 import PageLayout from "../components/page-layout";
 import getMetadataForPosts from "../lib/get-metadata-for-posts";
 
-// eslint-disable-next-line import/default
-// import posts from "../lib/posts";
-
 const PROJECTS = [
   {
     name: `next-plugin-profiler`,
@@ -63,7 +60,7 @@ function HomePage() {
 
           <p className="mb-12 text-xl leading-relaxed">
             I&apos;m a software engineer from Memphis, TN. I build internal
-            tools using React, Next.js, and GraphQL at a company called
+            tools using React, Next.js, GraphQL, and AWS at a company called
             {` `}
             <a
               href="https://lnc-online.com"
