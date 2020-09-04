@@ -11,7 +11,7 @@ class MyDocument extends Document {
     return (
       <Html itemScope itemType="http://schema.org/WebPage" lang="en-US">
         <Head />
-        <body>
+        <body className="bg-gray-100">
           <Main />
           <NextScript />
         </body>
