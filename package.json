@@ -11,7 +11,8 @@
     "fix:import-sort": "import-sort --write '**/*.js'",
     "fix:lint": "eslint --ext .jsx --ext .js . --fix",
     "fix:prettier": "prettier --write '**/*.{js,css,md,mdx}'",
-    "fix": "npm run fix:dependencies && npm run fix:lint && npm run fix:prettier && npm run fix:import-sort"
+    "fix:tailwind-css-class-order": "rustywind --write .",
+    "fix": "npm run fix:dependencies && npm run fix:lint && npm run fix:tailwind-css-class-order && npm run fix:prettier && npm run fix:import-sort"
   },
   "repository": {
     "type": "git",
@@ -52,6 +53,7 @@
     "import-sort-style-module": "6.0.0",
     "lint-staged": "10.4.0",
     "prettier": "2.1.2",
+    "rustywind": "0.6.7",
     "tailwindcss": "1.8.10"
   },
   "engines": {
