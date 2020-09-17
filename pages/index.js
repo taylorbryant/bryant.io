@@ -111,7 +111,7 @@ function HomePage() {
                     icon={item.icon}
                     title={item.title}
                   /></dt>
-                   <dd className="text-sm font-normal">{item.title}</dd>      
+                   <dd className="text-sm">{item.title}</dd>      
                   </dl>
                 </a>
               </li>
