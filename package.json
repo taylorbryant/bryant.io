@@ -55,9 +55,18 @@
     "prettier": "2.1.2",
     "tailwindcss": "1.8.10"
   },
+  "engines": {
+    "node": "^12"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
+    }
+  },
+  "importSort": {
+    ".js": {
+      "parser": "babylon",
+      "style": "module"
     }
   },
   "lint-staged": {

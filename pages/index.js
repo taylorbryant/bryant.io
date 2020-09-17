@@ -58,7 +58,7 @@ function HomePage() {
             Hi, I&apos;m Taylor. <span aria-hidden="true">👋</span>
           </h1>
 
-          <p className="mb-12 text-lg leading-relaxed">
+          <p className="mb-12 text-xl leading-relaxed">
             I&apos;m a software engineer from Memphis, TN. I build internal
             tools using React, Next.js, GraphQL, and AWS at a company called
             {` `}
@@ -104,15 +104,17 @@ function HomePage() {
               },
             ].map((item) => (
               <li key={item.url}>
-                <a href={item.url} rel="noopener noreferrer" target="_blank" className="no-underline">
-                  <dl className="flex items-center space-x-2">
-                  <dt><FontAwesomeIcon
-                    className="w-4 h-4"
+                <a
+                  className="no-underline"
+                  href={item.url}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <FontAwesomeIcon
+                    className="w-8 h-8"
                     icon={item.icon}
                     title={item.title}
-                  /></dt>
-                   <dd className="text-sm">{item.title}</dd>      
-                  </dl>
+                  />
                 </a>
               </li>
             ))}
@@ -128,7 +130,7 @@ function HomePage() {
         <div className="space-y-6">
           {PROJECTS.map((project) => (
             <a
-              className="block no-underline"
+              className="block font-normal no-underline"
               href={project.url}
               key={project.name}
               rel="noopener noreferrer"
@@ -136,12 +138,12 @@ function HomePage() {
             >
               <article className="bg-white rounded-md shadow-md cursor-pointer hover:shadow-lg">
                 <h1
-                  className={`flex items-center justify-center h-32 text-2xl text-center text-indigo-400 bg-indigo-100`}
+                  className={`flex items-center font-bold justify-center h-32 text-2xl text-center text-indigo-400 bg-indigo-100`}
                 >
                   {project.name}
                 </h1>
 
-                <div className="p-6 font-normal">
+                <div className="p-6">
                   <p className="mb-6 leading-relaxed">{project.description}</p>
 
                   <ul className="space-x-2">
