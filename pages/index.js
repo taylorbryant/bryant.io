@@ -58,7 +58,7 @@ function HomePage() {
             Hi, I&apos;m Taylor. <span aria-hidden="true">👋</span>
           </h1>
 
-          <p className="mb-12 text-xl leading-relaxed">
+          <p className="mb-12 text-lg leading-relaxed">
             I&apos;m a software engineer from Memphis, TN. I build internal
             tools using React, Next.js, GraphQL, and AWS at a company called
             {` `}
@@ -90,26 +90,29 @@ function HomePage() {
               {
                 url: `https://github.com/taylorbryant`,
                 icon: faGithub,
-                title: `GitHub Profile`,
+                title: `GitHub`,
               },
               {
                 url: `https://twitter.com/tayl_rbryant`,
                 icon: faTwitter,
-                title: `Twitter Profile`,
+                title: `Twitter`,
               },
               {
                 url: `https://www.linkedin.com/in/taylorjamesbryant/`,
                 icon: faLinkedinIn,
-                title: `LinkedIn Profile`,
+                title: `LinkedIn`,
               },
             ].map((item) => (
               <li key={item.url}>
                 <a href={item.url} rel="noopener noreferrer" target="_blank">
-                  <FontAwesomeIcon
-                    className="w-8 h-8"
+                  <dl className="flex items-center space-x-2">
+                  <dt><FontAwesomeIcon
+                    className="w-4 h-4"
                     icon={item.icon}
                     title={item.title}
-                  />
+                  /></dt>
+                   <dd>{item.title}</dd>      
+                  </dl>
                 </a>
               </li>
             ))}
