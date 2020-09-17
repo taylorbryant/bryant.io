@@ -104,14 +104,14 @@ function HomePage() {
               },
             ].map((item) => (
               <li key={item.url}>
-                <a href={item.url} rel="noopener noreferrer" target="_blank">
+                <a href={item.url} rel="noopener noreferrer" target="_blank" className="no-underline">
                   <dl className="flex items-center space-x-2">
                   <dt><FontAwesomeIcon
                     className="w-4 h-4"
                     icon={item.icon}
                     title={item.title}
                   /></dt>
-                   <dd className="text-sm font-normal no-underline">{item.title}</dd>      
+                   <dd className="text-sm font-normal">{item.title}</dd>      
                   </dl>
                 </a>
               </li>
