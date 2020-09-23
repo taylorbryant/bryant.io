@@ -1,6 +1,6 @@
 {
-  "name": "bryant.io",
-  "version": "1.0.33",
+  "name": "taylorbryant.dev",
+  "version": "0.0.1",
   "description": "Personal website for Taylor Bryant",
   "scripts": {
     "dev": "next",
@@ -16,14 +16,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/taylorbryant/bryant.io.git"
+    "url": "git+https://github.com/taylorbryant/taylorbryant.dev.git"
   },
   "author": "Taylor Bryant",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/taylorbryant/bryant.io/issues"
+    "url": "https://github.com/taylorbryant/taylorbryant.dev/issues"
   },
-  "homepage": "https://github.com/taylorbryant/bryant.io#readme",
+  "homepage": "https://github.com/taylorbryant/taylorbryant.dev#readme",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.30",
     "@fortawesome/free-brands-svg-icons": "5.14.0",
