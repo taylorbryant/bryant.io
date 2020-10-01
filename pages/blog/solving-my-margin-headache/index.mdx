@@ -16,13 +16,14 @@ Throughout my attempted mastery of CSS, one of my most significant pain points h
 First, I tried limiting myself to only using `margin-bottom`.
 
 <iframe
+  allowFullScreen={true}
+  allowtransparency="true"
+  className="w-full mb-6 outline-none"
+  frameBorder="no"
   height="500"
   scrolling="no"
   src="//codepen.io/taylorbryant/embed/ppdOZN/?height=500&default-tab=css,result&embed-version=3&editable=true"
-  frameBorder="no"
-  allowtransparency="true"
-  allowFullScreen={true}
-  className="w-full mb-6 outline-none"
+  title="A simple demo showing an example of using only the margin-bottom CSS property to create space between typography elements"
 />
 
 While this doesn't look awful, it introduces a couple of issues:
@@ -35,13 +36,14 @@ While this doesn't look awful, it introduces a couple of issues:
 Second, I tried modifying my code to account for any edge cases using `:first-child` and `:last-child` selectors.
 
 <iframe
+  allowFullScreen={true}
+  allowtransparency="true"
+  className="w-full mb-6 outline-none"
+  frameBorder="no"
   height="500"
   scrolling="no"
   src="//codepen.io/taylorbryant/embed/YYEeMW/?height=500&default-tab=css,result&embed-version=3&editable=true"
-  frameBorder="no"
-  allowtransparency="true"
-  allowFullScreen={true}
-  className="w-full mb-6 outline-none"
+  title="A simple demo showing an example of using the margin-bottom CSS property with the :first-child and :last-child pseudo-selectors to create space between typography elements"
 />
 
 This solves the issues introduced with the last approach. However, I can't help but get code smells, because:
@@ -54,13 +56,14 @@ This solves the issues introduced with the last approach. However, I can't help 
 By combining the `:not` selector with `:first-child` and `:last-child`, I was able to get rid of the excess code and land on my best approach yet.
 
 <iframe
+  allowFullScreen={true}
+  allowtransparency="true"
+  className="w-full mb-6 outline-none"
+  frameBorder="no"
   height="500"
   scrolling="no"
   src="//codepen.io/taylorbryant/embed/dJZqjg/?height=500&default-tab=css,result&embed-version=3&editable=true"
-  frameBorder="no"
-  allowtransparency="true"
-  allowFullScreen={true}
-  className="w-full mb-6 outline-none"
+  title="A simple demo showing an example of using the margin-bottom CSS property with the :first-child, :last-child, and :not pseudo-selectors to create space between typography elements"
 />
 
 ## Takeaway

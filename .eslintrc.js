@@ -1,15 +1,19 @@
 module.exports = {
-  env: {
-    browser: true,
-    es2020: true,
-    node: true,
-  },
+  env: { browser: true, es2020: true, node: true },
   extends: [
     `eslint:recommended`,
     `plugin:import/recommended`,
     `plugin:jsx-a11y/recommended`,
+    `plugin:mdx/recommended`,
     `plugin:react/recommended`,
     `plugin:react-hooks/recommended`,
+  ],
+  overrides: [
+    {
+      files: [`*.md`],
+      rules: { "prettier/prettier": [2, { parser: `markdown` }] },
+    },
+    { files: [`*.mdx`], extends: [`plugin:mdx/overrides`] },
   ],
   parser: `babel-eslint`,
   plugins: [`prettier`, `jsx-a11y`, `react`],
@@ -22,9 +26,5 @@ module.exports = {
     quotes: [`error`, `backtick`],
     "react/jsx-sort-props": [`error`],
   },
-  settings: {
-    react: {
-      version: `detect`,
-    },
-  },
+  settings: { react: { version: `detect` } },
 };
