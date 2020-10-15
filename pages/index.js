@@ -104,13 +104,12 @@ function HomePage() {
             ].map((item) => (
               <li key={item.url}>
                 <a
-                  className="no-underline"
+                  className="no-underline text-3xl"
                   href={item.url}
                   rel="noopener noreferrer"
                   target="_blank"
                 >
                   <FontAwesomeIcon
-                    className="w-8 h-8"
                     icon={item.icon}
                     title={item.title}
                   />
