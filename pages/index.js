@@ -59,15 +59,14 @@ function HomePage() {
           </h1>
 
           <p className="mb-12 text-xl leading-relaxed">
-            I&apos;m a software engineer from Memphis, TN. I build internal
-            tools using React, Next.js, GraphQL, and AWS at a company called
+            I&apos;m a software engineer from Memphis, TN. I build software to help people with OCD at a startup called
             {` `}
             <a
-              href="https://lnc-online.com"
+              href="https://treatmyocd.com"
               rel="noopener noreferrer"
               target="_blank"
             >
-              Livestock Nutrition Center
+              NOCD
             </a>
             . In my spare time, I{` `}
             <a
