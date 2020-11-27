@@ -82,6 +82,7 @@ function PostPageLayout(props) {
           headline: props.meta.title,
           description: props.meta.description,
           url: `https://taylorbryant.dev${router.asPath}`,
+          image: `https://taylorbryant.dev/android-chrome-256x256.png`,
           datePublished: props.meta.date,
           author: {
             "@type": `Person`,
