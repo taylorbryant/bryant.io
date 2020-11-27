@@ -78,12 +78,12 @@ function HomePage() {
           },
           blogPost: getMetadataForPosts()
             .filter(({ meta }) => meta.isPublished)
-            .map(({ meta }) => ({
+            .map(({ meta, link }) => ({
               "@type": `BlogPosting`,
               headline: meta.title,
               description: meta.description,
               image: `https://taylorbryant.dev/android-chrome-256x256.png`,
-              url: `https://taylorbryant.dev/blog${meta.link}`,
+              url: `https://taylorbryant.dev/blog${link}`,
               datePublished: meta.date,
               author: {
                 "@type": `Person`,

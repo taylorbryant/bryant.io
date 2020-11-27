@@ -2,11 +2,14 @@ import { format, parseISO } from "date-fns";
 import Head from "next/head";
 import PropTypes from "prop-types";
 import React from "react";
+import { useRouter } from "next/router";
 
 import PageLayout from "./page-layout";
 import buildStructuredDataSchema from "../lib/build-structured-data-schema";
 
 function PostPageLayout(props) {
+  const router = useRouter();
+
   return (
     <PageLayout>
       <Head>
@@ -31,7 +34,7 @@ function PostPageLayout(props) {
         />
         {/* Facebook Meta Tags */}
         <meta
-          content={`https://taylorbryant.dev/blog${props.meta.link}`}
+          content={`https://taylorbryant.dev/blog${router.asPath}`}
           key="facebook-url"
           property="og:url"
         />
@@ -78,7 +81,7 @@ function PostPageLayout(props) {
           "@type": `BlogPosting`,
           headline: props.meta.title,
           description: props.meta.description,
-          url: `https://taylorbryant.dev/blog${props.meta.link}`,
+          url: `https://taylorbryant.dev/blog${router.asPath}`,
           datePublished: props.meta.date,
           author: {
             "@type": `Person`,
