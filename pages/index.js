@@ -59,7 +59,8 @@ function HomePage() {
           </h1>
 
           <p className="mb-12 text-xl leading-relaxed">
-            I&apos;m a software engineer from Memphis, TN. I build software to help people with OCD at a startup called
+            I&apos;m a software engineer from Memphis, TN. I build software to
+            help people with OCD at a startup called
             {` `}
             <a
               href="https://treatmyocd.com"
@@ -104,15 +105,12 @@ function HomePage() {
             ].map((item) => (
               <li key={item.url}>
                 <a
-                  className="no-underline text-3xl"
+                  className="text-3xl no-underline"
                   href={item.url}
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  <FontAwesomeIcon
-                    icon={item.icon}
-                    title={item.title}
-                  />
+                  <FontAwesomeIcon icon={item.icon} title={item.title} />
                 </a>
               </li>
             ))}
@@ -128,6 +126,7 @@ function HomePage() {
         <div className="space-y-6">
           {PROJECTS.map((project) => (
             <a
+              aria-label={project.name}
               className="block font-normal no-underline"
               href={project.url}
               key={project.name}
@@ -136,7 +135,7 @@ function HomePage() {
             >
               <article className="bg-white rounded-md shadow-md cursor-pointer hover:shadow-lg">
                 <h1
-                  className={`flex items-center font-bold justify-center h-32 text-2xl text-center text-indigo-400 bg-indigo-100`}
+                  className={`flex items-center font-bold justify-center h-32 text-2xl text-center text-indigo-500 bg-indigo-100`}
                 >
                   {project.name}
                 </h1>
