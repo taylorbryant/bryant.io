@@ -8,39 +8,49 @@
 
 
 <url>
-  <loc>https://bryant.io/</loc>
-  <lastmod>2020-02-08T17:15:31+00:00</lastmod>
+  <loc>https://taylorbryant.dev/</loc>
+  <lastmod>2020-11-27T05:25:16+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://bryant.io/writing</loc>
-  <lastmod>2020-02-08T17:15:31+00:00</lastmod>
+  <loc>https://taylorbryant.dev/blog/optimize-your-prs-for-revertability</loc>
+  <lastmod>2020-11-27T05:25:16+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://bryant.io/projects</loc>
-  <lastmod>2020-02-08T17:15:31+00:00</lastmod>
+  <loc>https://taylorbryant.dev/blog/move-files-to-the-root-of-a-nextjs-project</loc>
+  <lastmod>2020-11-27T05:25:16+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://bryant.io/blog/optimize-your-prs-for-revertability</loc>
-  <lastmod>2020-02-08T17:15:31+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://taylorbryant.dev/blog/keep-your-css-cool-with-csscomb</loc>
+  <lastmod>2020-11-27T05:25:16+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://bryant.io/blog/move-files-to-the-root-of-a-nextjs-project</loc>
-  <lastmod>2020-02-08T17:15:31+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://taylorbryant.dev/blog/solving-my-margin-headache</loc>
+  <lastmod>2020-11-27T05:25:16+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://bryant.io/blog/solving-my-margin-headache</loc>
-  <lastmod>2020-02-08T17:15:31+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://taylorbryant.dev/blog/an-adventure-in-image-zooming</loc>
+  <lastmod>2020-11-27T05:25:16+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://bryant.io/blog/css-stats-bookmarklet</loc>
-  <lastmod>2020-02-08T17:15:31+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://taylorbryant.dev/blog/css-stats-bookmarklet</loc>
+  <lastmod>2020-11-27T05:25:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://taylorbryant.dev/blog/create-a-bash-alias-for-a-terminal-command</loc>
+  <lastmod>2020-11-27T05:25:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://taylorbryant.dev/blog/consider-using-system-fonts</loc>
+  <lastmod>2020-11-27T05:25:16+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 
 
