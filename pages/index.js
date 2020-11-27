@@ -83,7 +83,7 @@ function HomePage() {
               headline: meta.title,
               description: meta.description,
               image: `https://taylorbryant.dev/android-chrome-256x256.png`,
-              url: `https://taylorbryant.dev/blog${link}`,
+              url: `https://taylorbryant.dev${link}`,
               datePublished: meta.date,
               author: {
                 "@type": `Person`,
