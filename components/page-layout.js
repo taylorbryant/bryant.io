@@ -6,15 +6,14 @@ function PageLayout({ children }) {
   return (
     <div className="flex flex-col min-h-screen space-y-12 text-lg text-gray-800 md:space-y-24">
       <header className="flex items-center w-full max-w-3xl px-3 pt-3 mx-auto md:pt-6 md:px-6">
-        <div className="w-10 h-10 rounded-full">
-          <img
-            alt="An illustration of Taylor with his cat"
-            height={40}
-            loading="lazy"
-            src="https://www.gravatar.com/avatar/889987f164dfd9c869bb863c40d9cc12"
-            width={40}
-          />
-        </div>
+        <img
+          alt="An illustration of Taylor with his cat"
+          className="rounded-full"
+          height={40}
+          loading="lazy"
+          src="https://www.gravatar.com/avatar/889987f164dfd9c869bb863c40d9cc12"
+          width={40}
+        />
 
         <h1>
           <Link href="/">
