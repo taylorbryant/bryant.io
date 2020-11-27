@@ -82,7 +82,19 @@ function HomePage() {
               "@type": `BlogPosting`,
               headline: meta.title,
               description: meta.description,
-              url: `https://bryant.io/blog${meta.url}`,
+              image: `https://taylorbryant.dev/android-chrome-256x256.png`,
+              url: `https://taylorbryant.dev/blog${meta.link}`,
+              datePublished: meta.date,
+              author: {
+                "@type": `Person`,
+                name: `Taylor Bryant`,
+                url: `https://taylorbryant.dev`,
+              },
+              publisher: {
+                "@type": `Person`,
+                name: `Taylor Bryant`,
+                url: `https://taylorbryant.dev`,
+              },
             })),
         })}
       </Head>
