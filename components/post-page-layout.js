@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import React from "react";
 
 import PageLayout from "./page-layout";
+import buildStructuredDataSchema from "../lib/build-structured-data-schema";
 
 function PostPageLayout(props) {
   return (
@@ -71,6 +72,24 @@ function PostPageLayout(props) {
           key="twitter-iamge"
           name="twitter:image"
         />
+
+        {buildStructuredDataSchema({
+          "@context": `http://schema.org`,
+          "@type": `BlogPosting`,
+          headline: props.meta.title,
+          description: props.meta.description,
+          url: `https://bryant.io/blog${props.meta.url}`,
+          author: {
+            "@type": `Person`,
+            name: `Taylor Bryant`,
+            url: `https://taylorbryant.dev`,
+          },
+          publisher: {
+            "@type": `Person`,
+            name: `Taylor Bryant`,
+            url: `https://taylorbryant.dev`,
+          },
+        })}
       </Head>
 
       <article className="flex-col max-w-3xl px-3 mx-auto md:px-6">

@@ -1,17 +1,18 @@
 import Link from "next/link";
 import PropTypes from "prop-types";
 import React from "react";
+import Image from "next/image";
 
 function PageLayout({ children }) {
   return (
     <div className="flex flex-col min-h-screen space-y-12 text-lg text-gray-800 md:space-y-24">
       <header className="flex items-center w-full max-w-3xl px-3 pt-3 mx-auto md:pt-6 md:px-6">
-        <img
+        <Image
           alt="An illustration of Taylor with his cat"
           className="rounded-full"
           height={40}
           loading="lazy"
-          src="https://www.gravatar.com/avatar/889987f164dfd9c869bb863c40d9cc12"
+          src="/avatar.png"
           width={40}
         />
 

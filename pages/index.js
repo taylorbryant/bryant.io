@@ -9,6 +9,8 @@ import React from "react";
 
 import PageLayout from "../components/page-layout";
 import getMetadataForPosts from "../lib/get-metadata-for-posts";
+import buildStructuredDataSchema from "../lib/build-structured-data-schema";
+import Head from "next/head";
 
 const PROJECTS = [
   {
@@ -52,6 +54,39 @@ const PROJECTS = [
 function HomePage() {
   return (
     <PageLayout>
+      <Head>
+        {buildStructuredDataSchema({
+          "@context": `http://schema.org`,
+          "@type": `Person`,
+          name: `Taylor Bryant`,
+          url: `https://taylorbryant.dev`,
+          jobTitle: `Software Engineer`,
+          gender: `male`,
+          sameAs: [
+            `https://twitter.com/tayl_rbryant`,
+            `https://www.linkedin.com/in/taylorjamesbryant/`,
+          ],
+        })}
+
+        {buildStructuredDataSchema({
+          "@context": `http://schema.org`,
+          "@type": `Blog`,
+          author: {
+            "@type": `Person`,
+            name: `Taylor Bryant`,
+            url: `https://taylorbryant.dev`,
+          },
+          blogPost: getMetadataForPosts()
+            .filter(({ meta }) => meta.isPublished)
+            .map(({ meta }) => ({
+              "@type": `BlogPosting`,
+              headline: meta.title,
+              description: meta.description,
+              url: `https://bryant.io/blog${meta.url}`,
+            })),
+        })}
+      </Head>
+
       <div className="flex flex-col justify-center">
         <section className="max-w-3xl px-3 mx-auto md:px-6">
           <h1 className="mb-3 text-4xl font-bold">
