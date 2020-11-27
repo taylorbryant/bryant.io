@@ -34,7 +34,7 @@ function PostPageLayout(props) {
         />
         {/* Facebook Meta Tags */}
         <meta
-          content={`https://taylorbryant.dev/blog${router.asPath}`}
+          content={`https://taylorbryant.dev${router.asPath}`}
           key="facebook-url"
           property="og:url"
         />
@@ -81,7 +81,7 @@ function PostPageLayout(props) {
           "@type": `BlogPosting`,
           headline: props.meta.title,
           description: props.meta.description,
-          url: `https://taylorbryant.dev/blog${router.asPath}`,
+          url: `https://taylorbryant.dev${router.asPath}`,
           datePublished: props.meta.date,
           author: {
             "@type": `Person`,
