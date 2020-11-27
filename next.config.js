@@ -7,6 +7,9 @@ const withMDX = require(`@next/mdx`)({
 });
 
 module.exports = withMDX({
+  images: {
+    domains: [`gravatar.com`],
+  },
   pageExtensions: [`js`, `mdx`],
   webpack: (config) => {
     config.module.rules.push({
