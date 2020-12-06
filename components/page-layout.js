@@ -11,7 +11,7 @@ function PageLayout({ children }) {
           alt="An illustration of Taylor with his cat"
           className="rounded-full"
           height={40}
-          loading="lazy"
+          priority
           src="/avatar.png"
           width={40}
         />
