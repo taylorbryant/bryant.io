@@ -1,13 +1,13 @@
 import { format, parseISO } from "date-fns";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import PropTypes from "prop-types";
 import React from "react";
-import { useRouter } from "next/router";
 
-import PageLayout from "./page-layout";
 import buildStructuredDataSchema from "../lib/build-structured-data-schema";
+import PageLayout from "./page-layout";
 
-function PostPageLayout(props) {
+export default function PostPageLayout(props) {
   const router = useRouter();
 
   return (
@@ -116,5 +116,3 @@ PostPageLayout.propTypes = {
   children: PropTypes.node.isRequired,
   meta: PropTypes.object.isRequired,
 };
-
-export default PostPageLayout;

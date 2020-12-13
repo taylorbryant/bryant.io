@@ -4,13 +4,13 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 
 import PageLayout from "../components/page-layout";
-import getMetadataForPosts from "../lib/get-metadata-for-posts";
 import buildStructuredDataSchema from "../lib/build-structured-data-schema";
-import Head from "next/head";
+import getMetadataForPosts from "../lib/get-metadata-for-posts";
 
 const PROJECTS = [
   {
@@ -51,7 +51,7 @@ const PROJECTS = [
   },
 ];
 
-function HomePage() {
+export default function HomePage() {
   return (
     <PageLayout>
       <Head>
@@ -232,5 +232,3 @@ function HomePage() {
     </PageLayout>
   );
 }
-
-export default HomePage;

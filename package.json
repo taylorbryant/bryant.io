@@ -5,14 +5,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "export": "npm run build && next export",
-    "start": "next start",
-    "fix:dependencies": "npm audit fix",
-    "fix:import-sort": "import-sort --write '**/*.{js}'",
-    "fix:lint": "eslint --ext .jsx --ext .js --ext .mdx . --fix",
-    "fix:prettier": "prettier --write '**/*.{js,css,md,mdx}'",
-    "fix:tailwind-css-class-order": "rustywind --write .",
-    "fix": "npm run fix:dependencies && npm run fix:tailwind-css-class-order && npm run fix:import-sort && npm run fix:lint && npm run fix:prettier"
+    "start": "next start"
   },
   "repository": {
     "type": "git",
@@ -39,43 +32,38 @@
     "react-ga": "3.3.0"
   },
   "devDependencies": {
-    "autoprefixer": "10.0.4",
+    "autoprefixer": "10.1.0",
     "babel-eslint": "10.1.0",
-    "eslint": "7.14.0",
+    "eslint": "7.15.0",
+    "eslint-config-prettier": "7.0.0",
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-jsx-a11y": "6.4.1",
     "eslint-plugin-mdx": "1.8.2",
     "eslint-plugin-prettier": "3.2.0",
     "eslint-plugin-react": "7.21.5",
     "eslint-plugin-react-hooks": "4.2.0",
+    "eslint-plugin-simple-import-sort": "7.0.0",
     "file-loader": "6.2.0",
-    "husky": "4.3.0",
-    "import-sort-cli": "6.0.0",
-    "import-sort-parser-babylon": "6.0.0",
-    "import-sort-style-module": "6.0.0",
-    "lint-staged": "10.5.2",
-    "postcss": "8.1.14",
-    "prettier": "2.2.0",
+    "husky": "4.3.5",
+    "lint-staged": "10.5.3",
+    "postcss": "8.2.1",
+    "postcss-flexbugs-fixes": "5.0.2",
+    "postcss-hover-media-feature": "^1.0.0",
+    "postcss-preset-env": "6.7.0",
+    "prettier": "2.2.1",
     "rustywind": "0.7.0",
-    "tailwindcss": "2.0.1"
+    "tailwindcss": "2.0.2"
   },
   "engines": {
-    "node": "^12"
+    "node": "^14"
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
   },
-  "importSort": {
-    ".js": {
-      "parser": "babylon",
-      "style": "module"
-    }
-  },
   "lint-staged": {
-    "*.{js,css,md,mdx}": "npm run fix:prettier",
-    "*.{js,mdx}": "npm run fix:lint",
-    "*.{js}": "npm run fix:import-sort && npm run fix:tailwind-css-class-order"
+    "*.{css}": "prettier --write",
+    "*.{js,mdx}": "eslint --fix --ignore-path ./.gitignore"
   }
 }

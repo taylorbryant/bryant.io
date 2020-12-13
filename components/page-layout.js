@@ -1,9 +1,9 @@
+import Image from "next/image";
 import Link from "next/link";
 import PropTypes from "prop-types";
 import React from "react";
-import Image from "next/image";
 
-function PageLayout({ children }) {
+export default function PageLayout({ children }) {
   return (
     <div className="flex flex-col min-h-screen space-y-12 text-lg text-gray-800 md:space-y-24">
       <header className="flex items-center w-full max-w-3xl px-3 pt-3 mx-auto md:pt-6 md:px-6">
@@ -16,11 +16,9 @@ function PageLayout({ children }) {
           width={40}
         />
 
-        <h1>
-          <Link href="/">
-            <a className="ml-3 text-2xl no-underline">Taylor Bryant</a>
-          </Link>
-        </h1>
+        <Link href="/">
+          <a className="ml-3 text-2xl no-underline">Taylor Bryant</a>
+        </Link>
       </header>
 
       <main className="flex-1 space-y-12 md:space-y-24">{children}</main>
@@ -48,5 +46,3 @@ function PageLayout({ children }) {
 PageLayout.propTypes = {
   children: PropTypes.node.isRequired,
 };
-
-export default PageLayout;
