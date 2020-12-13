@@ -12,10 +12,10 @@ module.exports = {
     `prettier/react`,
   ],
   overrides: [
-    // {
-    //   files: [`*.md`],
-    //   rules: { "prettier/prettier": [2, { parser: `markdown` }] },
-    // },
+    {
+      files: [`*.md`],
+      rules: { "prettier/prettier": [2, { parser: `markdown` }] },
+    },
     { files: [`*.mdx`], extends: [`plugin:mdx/overrides`] },
   ],
   parser: `babel-eslint`,

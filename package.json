@@ -64,6 +64,6 @@
   },
   "lint-staged": {
     "*.{css}": "prettier --write",
-    "*.{js,mdx}": "eslint --fix --ignore-path ./.gitignore"
+    "*.{js,md,mdx}": "eslint --fix --ignore-path ./.gitignore"
   }
 }
