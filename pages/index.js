@@ -166,9 +166,9 @@ function HomePage() {
       </div>
 
       <section className="max-w-3xl px-3 mx-auto md:px-6">
-        <h1 className="mb-6 text-3xl font-bold" id="projects">
+        <h2 className="mb-6 text-3xl font-bold" id="projects">
           Projects
-        </h1>
+        </h2>
 
         <div className="space-y-6">
           {PROJECTS.map((project) => (
@@ -181,11 +181,11 @@ function HomePage() {
               target="_blank"
             >
               <article className="bg-white rounded-md shadow-md cursor-pointer hover:shadow-lg">
-                <h1
+                <h3
                   className={`flex items-center font-bold justify-center h-32 text-2xl text-center text-indigo-500 bg-indigo-100`}
                 >
                   {project.name}
-                </h1>
+                </h3>
 
                 <div className="p-6">
                   <p className="mb-6 leading-relaxed">{project.description}</p>
@@ -209,9 +209,9 @@ function HomePage() {
 
       <section className="flex flex-col max-w-3xl px-3 mx-auto md:px-6 md:justify-between md:flex-row">
         <div className="md:w-1/3">
-          <h1 className="mb-6 text-3xl font-bold md:mb-0" id="writing">
+          <h2 className="mb-6 text-3xl font-bold md:mb-0" id="writing">
             Writing
-          </h1>
+          </h2>
         </div>
 
         <div className="space-y-6 md:w-2/3">
@@ -219,11 +219,11 @@ function HomePage() {
             .filter(({ meta }) => meta.isPublished)
             .map(({ link, meta }) => (
               <article key={meta.title}>
-                <h1 className="mb-3 text-xl">
+                <h3 className="mb-3 text-xl">
                   <Link href={link}>
                     <a>{meta.title}</a>
                   </Link>
-                </h1>
+                </h3>
                 <p className="leading-relaxed">{meta.description}</p>
               </article>
             ))}
