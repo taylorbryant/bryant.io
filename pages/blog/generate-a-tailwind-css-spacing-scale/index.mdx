@@ -1,0 +1,34 @@
+import PostPageLayout from "../../../components/post-page-layout";
+
+export const meta = {
+  isPublished: false,
+  date: `2020-12-25`,
+  title: `Generate a custom spacing scale in your Tailwind CSS config`,
+  description: `A simple method for generating a custom spacing scale in your Tailwind CSS config`,
+};
+
+export default PostPageLayout;
+
+```js
+const { times } = require('lodash/fp');
+
+const convertPixelsToREM = (valueInPixels) => `${valueInPixels / 16}rem`;
+
+// For a number of spacing steps, create spacing values in 0.5 increments.
+// For example, calling `generateSpacingScale(2)` would generate:
+// [0, 0.5, 1, 1.5, 2]
+const generateSpacingScale = (numberOfSteps) =>
+  times((index) => index, numberOfSteps + 1).reduce((memo, value) => {
+    const valueInPixels = value * 4;
+
+    return {
+      ...memo,
+      [value]: convertPixelsToREM(valueInPixels),
+      ...(value !== numberOfSteps
+        ? {
+            [value + 0.5]: convertPixelsToREM(valueInPixels + 0.5),
+          }
+        : {}),
+    };
+  }, {});
+```
