@@ -191,7 +191,7 @@ export default function HomePage() {
 
       <section className="flex flex-col max-w-3xl px-3 mx-auto md:px-6 md:justify-between md:flex-row">
         <div className="md:w-1/3">
-          <h2 className="mb-6 text-3xl font-bold md:mb-0" id="writing">
+          <h2 className="mb-6 text-3xl font-bold md:mb-0" id="projects">
             Projects
           </h2>
         </div>
