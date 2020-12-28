@@ -34,7 +34,7 @@ export default function PostPageLayout({ meta, children }) {
 
       <NextSeo
         canonical={metaUrl}
-        description={meta.summary}
+        description={meta.description}
         openGraph={{
           title: meta.title,
           description: meta.description,
