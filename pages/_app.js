@@ -50,7 +50,14 @@ class MyApp extends App {
 
         <DefaultSeo
           openGraph={{
-            image: `https://taylorbryant.dev/android-chrome-256x256.png`,
+            images: [
+              {
+                url: `https://taylorbryant.dev/android-chrome-256x256.png`,
+                width: 256,
+                height: 256,
+                alt: `An illustration of Taylor Bryant and his cat`,
+              },
+            ],
           }}
           twitter={{
             handle: `@tayl_rbryant`,
