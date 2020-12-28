@@ -1,4 +1,4 @@
-import PostPageLayout from "../../../components/post-page-layout";
+import PostPageLayout from "../../../components/PostPageLayout";
 
 export const meta = {
   isPublished: true,
@@ -16,7 +16,7 @@ Throughout my attempted mastery of CSS, one of my most significant pain points h
 First, I tried limiting myself to only using `margin-bottom`.
 
 <iframe
-  allowFullScreen={true}
+  allowFullScreen
   allowtransparency="true"
   className="w-full mb-6 outline-none"
   frameBorder="no"
@@ -36,7 +36,7 @@ While this doesn't look awful, it introduces a couple of issues:
 Second, I tried modifying my code to account for any edge cases using `:first-child` and `:last-child` selectors.
 
 <iframe
-  allowFullScreen={true}
+  allowFullScreen
   allowtransparency="true"
   className="w-full mb-6 outline-none"
   frameBorder="no"
@@ -56,7 +56,7 @@ This solves the issues introduced with the last approach. However, I can't help 
 By combining the `:not` selector with `:first-child` and `:last-child`, I was able to get rid of the excess code and land on my best approach yet.
 
 <iframe
-  allowFullScreen={true}
+  allowFullScreen
   allowtransparency="true"
   className="w-full mb-6 outline-none"
   frameBorder="no"

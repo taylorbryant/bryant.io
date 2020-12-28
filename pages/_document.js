@@ -9,9 +9,9 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html itemScope itemType="http://schema.org/WebPage" lang="en-US">
+      <Html lang="en-US">
         <Head />
-        <body className="bg-gray-100">
+        <body>
           <Main />
           <NextScript />
         </body>

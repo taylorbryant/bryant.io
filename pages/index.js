@@ -1,16 +1,20 @@
 import {
   faGithub,
+  faInstagram,
   faLinkedinIn,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Head from "next/head";
 import Link from "next/link";
+import { NextSeo } from "next-seo";
 import React from "react";
 
-import PageLayout from "../components/page-layout";
-import buildStructuredDataSchema from "../lib/build-structured-data-schema";
-import getMetadataForPosts from "../lib/get-metadata-for-posts";
+import buildStructuredDataSchema from "../lib/buildStructuredDataSchema";
+import getMetadataForPosts from "../lib/getMetadataForPosts";
+
+const META_DESCRIPTION = `A software engineer from Memphis, TN, specializing in React, Next.js, Tailwind CSS, and GraphQL`;
+const META_TITLE = `Taylor Bryant`;
 
 const PROJECTS = [
   {
@@ -53,7 +57,7 @@ const PROJECTS = [
 
 export default function HomePage() {
   return (
-    <PageLayout>
+    <>
       <Head>
         {buildStructuredDataSchema({
           "@context": `http://schema.org`,
@@ -99,6 +103,18 @@ export default function HomePage() {
         })}
       </Head>
 
+      <NextSeo
+        canonical="https://taylorbryant.dev"
+        description={META_DESCRIPTION}
+        openGraph={{
+          title: META_TITLE,
+          description: META_DESCRIPTION,
+          type: `website`,
+          url: `https://taylorbryant.dev`,
+        }}
+        title={META_TITLE}
+      />
+
       <div className="flex flex-col justify-center">
         <section className="max-w-3xl px-3 mx-auto md:px-6">
           <h1 className="mb-3 text-4xl font-bold">
@@ -106,8 +122,7 @@ export default function HomePage() {
           </h1>
 
           <p className="mb-12 text-xl leading-relaxed">
-            I&apos;m a software engineer from Memphis, TN. I build software to
-            help people with OCD at a startup called
+            I build software to help people with OCD at a startup called
             {` `}
             <a
               href="https://treatmyocd.com"
@@ -145,19 +160,28 @@ export default function HomePage() {
                 title: `Twitter`,
               },
               {
-                url: `https://www.linkedin.com/in/taylorjamesbryant/`,
+                url: `https://www.linkedin.com/in/taylorjamesbryant`,
                 icon: faLinkedinIn,
                 title: `LinkedIn`,
+              },
+              {
+                url: `https://instagram.com/tayl_rbryant`,
+                icon: faInstagram,
+                title: `Instagram`,
               },
             ].map((item) => (
               <li key={item.url}>
                 <a
-                  className="text-3xl no-underline"
+                  className="text-3xl no-underline block text-black"
                   href={item.url}
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  <FontAwesomeIcon icon={item.icon} title={item.title} />
+                  <FontAwesomeIcon
+                    className="w-8 h-8"
+                    icon={item.icon}
+                    title={item.title}
+                  />
                 </a>
               </li>
             ))}
@@ -165,44 +189,23 @@ export default function HomePage() {
         </section>
       </div>
 
-      <section className="max-w-3xl px-3 mx-auto md:px-6">
-        <h2 className="mb-6 text-3xl font-bold" id="projects">
-          Projects
-        </h2>
+      <section className="flex flex-col max-w-3xl px-3 mx-auto md:px-6 md:justify-between md:flex-row">
+        <div className="md:w-1/3">
+          <h2 className="mb-6 text-3xl font-bold md:mb-0" id="writing">
+            Projects
+          </h2>
+        </div>
 
-        <div className="space-y-6">
-          {PROJECTS.map((project) => (
-            <a
-              aria-label={project.name}
-              className="block font-normal no-underline"
-              href={project.url}
-              key={project.name}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <article className="bg-white rounded-md shadow-md cursor-pointer hover:shadow-lg">
-                <h3
-                  className={`flex items-center font-bold justify-center h-32 text-2xl text-center text-indigo-500 bg-indigo-100`}
-                >
-                  {project.name}
-                </h3>
-
-                <div className="p-6">
-                  <p className="mb-6 leading-relaxed">{project.description}</p>
-
-                  <ul className="space-x-2">
-                    {project.tags.map((tag) => (
-                      <li
-                        className={`bg-gray-200 text-xs text-gray-600 inline rounded-full px-3 py-1`}
-                        key={tag.name}
-                      >
-                        {tag.name}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </article>
-            </a>
+        <div className="space-y-6 md:w-2/3">
+          {PROJECTS.map(({ name, url, description }) => (
+            <article key={name}>
+              <h3 className="mb-3 text-xl">
+                <a href={url} rel="noreferrer" target="_blank">
+                  {name}
+                </a>
+              </h3>
+              <p className="leading-relaxed">{description}</p>
+            </article>
           ))}
         </div>
       </section>
@@ -229,6 +232,6 @@ export default function HomePage() {
             ))}
         </div>
       </section>
-    </PageLayout>
+    </>
   );
 }
