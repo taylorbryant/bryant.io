@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   a {
     @apply text-blue;
     @apply font-bold;
