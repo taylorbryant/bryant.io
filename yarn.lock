@@ -6373,10 +6373,10 @@ run-queue@^1.0.0, run-queue@^1.0.3:
   dependencies:
     aproba "^1.1.1"
 
-rustywind@0.7.0:
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/rustywind/-/rustywind-0.7.0.tgz#79c6ed4b8b742375e967199f07aa0b29c200d7aa"
-  integrity sha512-LXv2pWFTcow2p1fB5OAwdrkbI0BRcj7ghq6N/VD2wahpyc5ZnxcoPyzcAL0fR6Gg2JC61dUtASO5bxxaPvKNpw==
+rustywind@0.8.1:
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/rustywind/-/rustywind-0.8.1.tgz#1084f7408c962a44bf90ea6dca897e10ccbd2977"
+  integrity sha512-oauFGMxPO4sxDMdNfXzLTrBEBbd74PHoIy5T92VWZwFaSCHw4GAunxAy2XzPUOmHTomuEdvXdHaU7dZhYXCvaQ==
 
 rxjs@^6.6.3:
   version "6.6.3"
