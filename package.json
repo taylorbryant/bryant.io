@@ -20,7 +20,7 @@
   "homepage": "https://github.com/taylorbryant/taylorbryant.dev#readme",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.32",
-    "@fortawesome/free-brands-svg-icons": "5.15.1",
+    "@fortawesome/free-brands-svg-icons": "5.15.3",
     "@fortawesome/react-fontawesome": "0.1.14",
     "next": "10.0.4",
     "next-seo": "4.26.0",
